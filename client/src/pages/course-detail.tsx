@@ -1,5 +1,5 @@
 import { useRoute } from "wouter";
-import { courses } from "@/lib/courses";
+import { courses, JourneyStep } from "@/lib/courses";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import NotFound from "@/pages/not-found";
@@ -19,19 +19,32 @@ import {
   Star,
   Timer,
   Globe,
-  Rocket
+  Rocket,
+  Info,
+  X
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import stockImage from "@assets/stock_images/technology_corporate_313834e7.jpg";
 
 export default function CourseDetail() {
   const [, params] = useRoute("/course/:slug");
   const slug = params?.slug;
   const course = courses.find((c) => c.slug === slug);
+  const [selectedStep, setSelectedStep] = useState<JourneyStep | null>(null);
 
   if (!course) {
     return <NotFound />;
   }
+
+  const handleDownload = () => {
+    // Mock PDF download
+    const link = document.createElement("a");
+    link.href = "#";
+    link.download = `${course.slug}-syllabus.pdf`;
+    link.click();
+    alert("Syllabus download started! (Demo)");
+  };
 
   return (
     <div className="min-h-screen flex flex-col font-sans bg-slate-50">
@@ -144,12 +157,36 @@ export default function CourseDetail() {
           </div>
         </section>
 
+        {/* Tools Section */}
+        <section className="py-24 bg-white border-b border-slate-100">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center mb-16">
+              <h2 className="font-heading text-3xl font-bold mb-4">Tools You'll <span className="text-primary">Master</span></h2>
+              <p className="text-slate-500">Industry standard tools used by top MNCs</p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-12">
+              {course.tools.map((tool) => (
+                <motion.div 
+                  key={tool.name}
+                  whileHover={{ scale: 1.1 }}
+                  className="flex flex-col items-center gap-3"
+                >
+                  <div className="h-20 w-20 rounded-2xl bg-slate-50 border border-slate-100 p-4 flex items-center justify-center shadow-sm">
+                    <img src={tool.icon} alt={tool.name} className="h-full w-full object-contain" />
+                  </div>
+                  <span className="text-sm font-bold text-slate-600">{tool.name}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Learning Journey Section */}
         <section className="py-24 bg-white overflow-hidden">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-3xl mx-auto mb-20">
               <h2 className="font-heading text-4xl font-bold mb-6">Your Learning <span className="text-primary">Journey</span></h2>
-              <p className="text-slate-500 text-lg">A structured path from beginner to industry-ready professional, designed based on top MNC requirements.</p>
+              <p className="text-slate-500 text-lg">A structured path from beginner to industry-ready professional. Click on any step to see more details.</p>
             </div>
 
             <div className="relative">
@@ -161,15 +198,16 @@ export default function CourseDetail() {
                   <motion.div 
                     key={i}
                     whileHover={{ scale: 1.02 }}
-                    className="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50"
+                    onClick={() => setSelectedStep(step)}
+                    className="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 cursor-pointer group"
                   >
                     <div className={`h-12 w-12 rounded-2xl ${course.color} flex items-center justify-center text-white font-bold text-xl mb-6 shadow-lg shadow-current/20`}>
                       {i + 1}
                     </div>
-                    <h4 className="text-xl font-bold mb-3">{step.step}</h4>
-                    <p className="text-slate-500 text-sm leading-relaxed">{step.detail}</p>
-                    <div className="mt-4 flex items-center text-primary font-bold text-xs uppercase tracking-widest">
-                      Module Details <ChevronRight className="h-4 w-4" />
+                    <h4 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">{step.step}</h4>
+                    <p className="text-slate-500 text-sm leading-relaxed mb-4">{step.detail}</p>
+                    <div className="mt-auto flex items-center text-primary font-bold text-xs uppercase tracking-widest">
+                      Show Details <Info className="ml-1 h-3 w-3" />
                     </div>
                   </motion.div>
                 ))}
@@ -195,8 +233,12 @@ export default function CourseDetail() {
                       </div>
                     ))}
                   </div>
-                  <Button variant="outline" className="w-full h-12 rounded-xl border-primary text-primary hover:bg-primary/5 font-bold">
-                    <Download className="mr-2 h-4 w-4" /> Full Syllabus (PDF)
+                  <Button 
+                    onClick={handleDownload}
+                    variant="outline" 
+                    className="w-full h-12 rounded-xl border-primary text-primary hover:bg-primary/5 font-bold"
+                  >
+                    <Download className="mr-2 h-4 w-4" /> Download Complete Course PDF
                   </Button>
                 </div>
               </div>
@@ -235,6 +277,49 @@ export default function CourseDetail() {
           </div>
         </section>
       </main>
+
+      {/* Detail Modal */}
+      <AnimatePresence>
+        {selectedStep && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedStep(null)}
+              className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
+            />
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              className="relative w-full max-w-lg bg-white rounded-[2rem] p-8 shadow-2xl"
+            >
+              <button 
+                onClick={() => setSelectedStep(null)}
+                className="absolute top-6 right-6 p-2 rounded-full hover:bg-slate-100"
+              >
+                <X className="h-5 w-5" />
+              </button>
+              
+              <div className="space-y-6">
+                <Badge className="bg-primary/10 text-primary border-none">Step Details</Badge>
+                <h3 className="font-heading text-3xl font-bold">{selectedStep.step}</h3>
+                <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                  <p className="text-slate-700 leading-relaxed font-medium">
+                    {selectedStep.extendedInfo}
+                  </p>
+                </div>
+                <div className="flex gap-3">
+                  <Button onClick={() => setSelectedStep(null)} className="flex-1 bg-primary h-12 rounded-xl font-bold">
+                    Got it
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
 
       <Footer />
     </div>
