@@ -5,7 +5,23 @@ import { Footer } from "@/components/layout/Footer";
 import NotFound from "@/pages/not-found";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, Clock, Calendar, Download, Share2, PlayCircle, Users, Trophy } from "lucide-react";
+import { 
+  CheckCircle2, 
+  Clock, 
+  Calendar, 
+  Download, 
+  PlayCircle, 
+  Users, 
+  Trophy, 
+  Target, 
+  Zap, 
+  ChevronRight, 
+  Star,
+  Timer,
+  Globe,
+  Rocket
+} from "lucide-react";
+import { motion } from "framer-motion";
 import stockImage from "@assets/stock_images/technology_corporate_313834e7.jpg";
 
 export default function CourseDetail() {
@@ -16,8 +32,6 @@ export default function CourseDetail() {
   if (!course) {
     return <NotFound />;
   }
-
-  const Icon = course.icon;
 
   return (
     <div className="min-h-screen flex flex-col font-sans bg-slate-50">
@@ -33,132 +47,189 @@ export default function CourseDetail() {
            />
            
           <div className="container mx-auto px-4 md:px-6 relative z-20">
-            <div className="grid lg:grid-cols-3 gap-12">
-              <div className="lg:col-span-2 space-y-6">
-                <div className="flex items-center gap-3">
-                  <Badge variant="secondary" className="bg-primary text-white border-none">
-                    {course.level} Level
-                  </Badge>
-                  <div className="flex items-center gap-1 text-yellow-400">
-                    <span>★</span>
-                    <span className="font-bold">{course.rating}</span>
-                    <span className="text-slate-400 text-sm ml-1">({course.students} students)</span>
+            <div className="grid lg:grid-cols-3 gap-12 items-center">
+              <div className="lg:col-span-2 space-y-8">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="space-y-4"
+                >
+                  <div className="flex flex-wrap items-center gap-3">
+                    <Badge className="bg-primary/20 text-primary border-primary/30 hover:bg-primary/30">
+                      {course.level} Level
+                    </Badge>
+                    <Badge variant="outline" className="border-green-500/50 text-green-400">
+                      Online Live Classes
+                    </Badge>
+                    <div className="flex items-center gap-1 text-yellow-400 font-bold">
+                      <Star className="h-4 w-4 fill-current" />
+                      <span>{course.rating}</span>
+                      <span className="text-slate-400 text-sm font-normal ml-1">({course.students.toLocaleString()} students)</span>
+                    </div>
                   </div>
-                </div>
 
-                <h1 className="font-heading text-4xl lg:text-6xl font-bold tracking-tight text-white">
-                  {course.title}
-                </h1>
-                
-                <p className="text-lg lg:text-xl text-slate-300 max-w-3xl">
-                  {course.description} Get job-ready with our comprehensive curriculum designed by industry experts.
-                </p>
+                  <h1 className="font-heading text-4xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
+                    {course.title} <span className="text-primary">Mastery</span>
+                  </h1>
+                  
+                  <p className="text-xl text-slate-300 max-w-2xl leading-relaxed">
+                    {course.description} Designed for both students and working professionals looking for a career transition.
+                  </p>
 
-                <div className="flex flex-wrap gap-6 text-sm font-medium text-slate-300 pt-4">
-                  <div className="flex items-center gap-2">
-                    <Clock className="h-5 w-5 text-primary" />
-                    <span>Duration: {course.duration}</span>
+                  <div className="flex flex-wrap gap-6 pt-4">
+                    <div className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
+                      <Clock className="h-6 w-6 text-primary" />
+                      <div>
+                        <p className="text-xs text-slate-400">Duration</p>
+                        <p className="font-bold text-white">{course.duration}</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
+                      <Target className="h-6 w-6 text-primary" />
+                      <div>
+                        <p className="text-xs text-slate-400">Salary Range</p>
+                        <p className="font-bold text-white">{course.salaryRange}</p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Calendar className="h-5 w-5 text-primary" />
-                    <span>Next Batch: Starts Monday</span>
-                  </div>
-                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-primary" />
-                    <span>Certification Included</span>
-                  </div>
-                </div>
+                </motion.div>
               </div>
 
-              {/* Enrollment Card (Floating on Desktop) */}
-              <div className="lg:col-span-1">
-                <div className="bg-white rounded-2xl p-6 shadow-2xl border border-slate-200 text-slate-900 lg:mt-8">
-                  <div className="aspect-video bg-slate-100 rounded-lg mb-6 flex items-center justify-center relative group cursor-pointer overflow-hidden">
-                    <div className={`absolute inset-0 ${course.color} opacity-10`} />
-                    <PlayCircle className="h-16 w-16 text-primary group-hover:scale-110 transition-transform" />
-                    <span className="absolute bottom-4 text-sm font-medium text-slate-500">Watch Course Preview</span>
+              <motion.div 
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                className="lg:col-span-1"
+              >
+                <div className="bg-white rounded-3xl p-8 shadow-2xl border border-white/20 text-slate-900">
+                  <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <Zap className="text-primary h-6 w-6 fill-primary" />
+                    Join Next Batch
+                  </h3>
+                  
+                  <div className="space-y-4 mb-8">
+                    <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex justify-between items-center">
+                      <div>
+                        <p className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Starting Date</p>
+                        <p className="font-bold text-slate-900">Next Monday</p>
+                      </div>
+                      <Calendar className="h-8 w-8 text-primary/40" />
+                    </div>
+
+                    <div className="space-y-3">
+                      <p className="text-sm font-bold text-slate-700 flex items-center gap-2">
+                        <Timer className="h-4 w-4" /> Available Slots (IST)
+                      </p>
+                      <div className="grid grid-cols-1 gap-2">
+                        {course.slots.map((slot, i) => (
+                          <div key={i} className="flex items-center justify-between p-3 rounded-xl border border-slate-100 bg-white hover:border-primary/30 transition-colors">
+                            <span className="text-sm font-medium">{slot.time}</span>
+                            <Badge variant={slot.availability === 'Full' ? 'destructive' : 'outline'} className="text-[10px]">
+                              {slot.availability}
+                            </Badge>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                   
-                  <div className="space-y-4">
-                     <div className="flex items-end gap-2">
-                       <span className="text-3xl font-bold text-slate-900">Request Pricing</span>
-                     </div>
-                     
-                     <Button size="lg" className="w-full bg-primary hover:bg-primary/90 h-12 text-lg">
-                       Enroll Now
-                     </Button>
-                     <Button size="lg" variant="outline" className="w-full border-primary text-primary hover:bg-primary/5">
-                       <Download className="mr-2 h-4 w-4" /> Download Syllabus
-                     </Button>
-                  </div>
-
-                  <div className="mt-6 space-y-3 pt-6 border-t border-slate-100">
-                    <p className="font-semibold text-sm">This course includes:</p>
-                    <ul className="space-y-2 text-sm text-slate-600">
-                      <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-green-500" /> Live Interactive Classes</li>
-                      <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-green-500" /> Real-world Projects</li>
-                      <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-green-500" /> Career Guidance</li>
-                    </ul>
-                  </div>
+                  <Button size="lg" className="w-full bg-primary hover:bg-primary/90 h-14 text-lg font-bold rounded-2xl shadow-lg shadow-primary/20">
+                    Book Free Demo
+                  </Button>
+                  <p className="text-center text-xs text-slate-400 mt-4">
+                    *Limited seats to ensure quality interaction
+                  </p>
                 </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Learning Journey Section */}
+        <section className="py-24 bg-white overflow-hidden">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <h2 className="font-heading text-4xl font-bold mb-6">Your Learning <span className="text-primary">Journey</span></h2>
+              <p className="text-slate-500 text-lg">A structured path from beginner to industry-ready professional, designed based on top MNC requirements.</p>
+            </div>
+
+            <div className="relative">
+              {/* Horizontal Line for Desktop */}
+              <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-100 -translate-y-1/2" />
+              
+              <div className="grid lg:grid-cols-4 gap-8 relative z-10">
+                {course.journey.map((step, i) => (
+                  <motion.div 
+                    key={i}
+                    whileHover={{ scale: 1.02 }}
+                    className="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50"
+                  >
+                    <div className={`h-12 w-12 rounded-2xl ${course.color} flex items-center justify-center text-white font-bold text-xl mb-6 shadow-lg shadow-current/20`}>
+                      {i + 1}
+                    </div>
+                    <h4 className="text-xl font-bold mb-3">{step.step}</h4>
+                    <p className="text-slate-500 text-sm leading-relaxed">{step.detail}</p>
+                    <div className="mt-4 flex items-center text-primary font-bold text-xs uppercase tracking-widest">
+                      Module Details <ChevronRight className="h-4 w-4" />
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* Syllabus Section */}
-        <section className="py-20 container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2 space-y-12">
-              <div>
-                <h2 className="font-heading text-2xl font-bold mb-6">What you'll learn</h2>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {course.modules.map((module, i) => (
-                    <div key={i} className="flex items-start gap-3 p-4 rounded-xl border bg-white shadow-sm">
-                      <div className={`mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${course.color} text-white text-xs font-bold`}>
-                        {i + 1}
+        {/* Features & Syllabus */}
+        <section className="py-24 bg-slate-50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid lg:grid-cols-2 gap-20">
+              <div className="space-y-12">
+                <div className="space-y-6">
+                  <h2 className="font-heading text-3xl font-bold">Comprehensive <span className="text-primary">Syllabus</span></h2>
+                  <div className="grid gap-4">
+                    {course.modules.map((module, i) => (
+                      <div key={i} className="flex items-center gap-4 p-5 rounded-2xl bg-white border border-slate-200 hover:border-primary/40 transition-all cursor-default group shadow-sm">
+                        <div className={`h-8 w-8 rounded-lg ${course.color} bg-opacity-10 flex items-center justify-center shrink-0 group-hover:bg-opacity-100 transition-all`}>
+                          <CheckCircle2 className={`h-4 w-4 ${course.color.replace('bg-', 'text-')} group-hover:text-white`} />
+                        </div>
+                        <span className="font-bold text-slate-700">{module}</span>
                       </div>
-                      <span className="font-medium text-slate-700">{module}</span>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
+                  <Button variant="outline" className="w-full h-12 rounded-xl border-primary text-primary hover:bg-primary/5 font-bold">
+                    <Download className="mr-2 h-4 w-4" /> Full Syllabus (PDF)
+                  </Button>
                 </div>
               </div>
 
-              <div>
-                <h2 className="font-heading text-2xl font-bold mb-6">Technologies Covered</h2>
-                <div className="flex flex-wrap gap-3">
-                  {course.tags.map(tag => (
-                     <span key={tag} className="px-4 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium shadow-sm">
-                       {tag}
-                     </span>
-                  ))}
+              <div className="space-y-12">
+                <div className="bg-slate-900 rounded-[2.5rem] p-12 text-white relative overflow-hidden">
+                  <div className="absolute top-0 right-0 p-8 opacity-10">
+                    <Rocket className="h-40 w-40" />
+                  </div>
+                  <h3 className="font-heading text-3xl font-bold mb-8">What Makes Us <span className="text-primary">Unique?</span></h3>
+                  <div className="grid gap-8">
+                    {course.features.map((feature, i) => (
+                      <div key={i} className="flex gap-5">
+                        <div className="h-14 w-14 rounded-2xl bg-white/10 flex items-center justify-center shrink-0">
+                          {i === 0 ? <Users className="h-6 w-6 text-primary" /> : i === 1 ? <Trophy className="h-6 w-6 text-primary" /> : <Globe className="h-6 w-6 text-primary" />}
+                        </div>
+                        <div>
+                          <h4 className="text-xl font-bold mb-1">{feature}</h4>
+                          <p className="text-slate-400 text-sm">Real-world training focused on landing you a top-tier job.</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="mt-12 pt-12 border-t border-white/10 text-center">
+                    <p className="text-sm text-slate-400 mb-6 font-medium">Trusted by Hiring Managers from</p>
+                    <div className="flex flex-wrap justify-center gap-6 opacity-30 grayscale invert">
+                      {['Google', 'Amazon', 'TCS', 'Wipro'].map(brand => (
+                        <span key={brand} className="text-xl font-bold">{brand}</span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            
-            <div className="lg:col-span-1 space-y-8">
-              <div className="bg-white rounded-xl p-6 border shadow-sm">
-                 <h3 className="font-heading text-lg font-bold mb-4">Training Features</h3>
-                 <div className="space-y-4">
-                    <div className="flex gap-4">
-                      <div className="h-10 w-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-                        <Users className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold">Expert Trainers</h4>
-                        <p className="text-sm text-slate-500">Learn from industry veterans with 10+ years exp.</p>
-                      </div>
-                    </div>
-                    <div className="flex gap-4">
-                      <div className="h-10 w-10 rounded-lg bg-green-50 text-green-600 flex items-center justify-center shrink-0">
-                        <Trophy className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold">Certification</h4>
-                        <p className="text-sm text-slate-500">Get recognized industry certification upon completion.</p>
-                      </div>
-                    </div>
-                 </div>
               </div>
             </div>
           </div>

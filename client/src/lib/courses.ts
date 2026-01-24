@@ -8,8 +8,18 @@ import {
   BadgeCheck, 
   Box, 
   Users, 
-  Server
+  Server,
+  Zap,
+  Globe,
+  Rocket,
+  Target
 } from "lucide-react";
+
+export interface TimeSlot {
+  time: string;
+  type: "Online" | "In-Person";
+  availability: "Available" | "Filling Fast" | "Full";
+}
 
 export interface Course {
   id: string;
@@ -24,7 +34,22 @@ export interface Course {
   tags: string[];
   color: string;
   modules: string[];
+  journey: {
+    step: string;
+    detail: string;
+  }[];
+  slots: TimeSlot[];
+  features: string[];
+  salaryRange: string;
 }
+
+const commonSlots: TimeSlot[] = [
+  { time: "07:00 AM - 09:00 AM", type: "Online", availability: "Available" },
+  { time: "10:00 AM - 12:00 PM", type: "Online", availability: "Filling Fast" },
+  { time: "02:00 PM - 04:00 PM", type: "Online", availability: "Available" },
+  { time: "06:00 PM - 08:00 PM", type: "Online", availability: "Full" },
+  { time: "08:30 PM - 10:30 PM", type: "Online", availability: "Filling Fast" },
+];
 
 export const courses: Course[] = [
   {
@@ -39,6 +64,15 @@ export const courses: Course[] = [
     students: 12500,
     tags: ["PowerBI", "SQL", "Tableau", "Excel"],
     color: "bg-blue-500",
+    salaryRange: "4 LPA - 12 LPA",
+    features: ["100% Placement Guarantee", "NASSCOM Certified", "Hands-on Projects"],
+    journey: [
+      { step: "Fundamentals", detail: "Excel mastery and basic statistics" },
+      { step: "SQL Mastery", detail: "Advanced database querying and management" },
+      { step: "Visualization", detail: "PowerBI and Tableau dashboarding" },
+      { step: "Capstone", detail: "Real-world data project implementation" }
+    ],
+    slots: commonSlots,
     modules: [
       "Introduction to Data Analytics",
       "Advanced Excel & Macros",
@@ -60,6 +94,15 @@ export const courses: Course[] = [
     students: 8400,
     tags: ["Python", "ML", "AI", "TensorFlow"],
     color: "bg-purple-600",
+    salaryRange: "6 LPA - 25 LPA",
+    features: ["Generative AI Focus", "GPU Lab Access", "MNC Partnerships"],
+    journey: [
+      { step: "Python for DS", detail: "Programming and data manipulation" },
+      { step: "Math & Stats", detail: "Probability and Linear Algebra" },
+      { step: "ML & AI", detail: "Deep learning and neural networks" },
+      { step: "Gen AI", detail: "LLMs and prompt engineering" }
+    ],
+    slots: commonSlots,
     modules: [
       "Python Programming Fundamentals",
       "Statistics & Probability",
@@ -81,6 +124,15 @@ export const courses: Course[] = [
     students: 15600,
     tags: ["Java", "Spring Boot", "React", "Hibernate"],
     color: "bg-orange-500",
+    salaryRange: "5 LPA - 15 LPA",
+    features: ["Microservices Focus", "Cloud Deployment", "Mock Interviews"],
+    journey: [
+      { step: "Core Java", detail: "OOPS concepts and collections" },
+      { step: "Backend", detail: "Spring Boot and Hibernate" },
+      { step: "Frontend", detail: "React.js and Tailwind CSS" },
+      { step: "Integration", detail: "Full stack project with cloud" }
+    ],
+    slots: commonSlots,
     modules: [
       "Core Java & Collections",
       "Advanced Java (J2EE)",
@@ -102,6 +154,15 @@ export const courses: Course[] = [
     students: 18200,
     tags: ["Python", "Django", "React", "Postgres"],
     color: "bg-yellow-500",
+    salaryRange: "4.5 LPA - 14 LPA",
+    features: ["Startup Ready", "API Mastery", "Portfolio Building"],
+    journey: [
+      { step: "Python Basic", detail: "Syntax and data structures" },
+      { step: "Django/Flask", detail: "Robust backend frameworks" },
+      { step: "React Frontend", detail: "Modern UI development" },
+      { step: "Deployment", detail: "Docker and AWS hosting" }
+    ],
+    slots: commonSlots,
     modules: [
       "Python Core & Advanced",
       "Web Frameworks (Django/Flask)",
@@ -123,6 +184,15 @@ export const courses: Course[] = [
     students: 9800,
     tags: ["AWS", "Cloud", "DevOps", "EC2"],
     color: "bg-indigo-500",
+    salaryRange: "5 LPA - 18 LPA",
+    features: ["Certification Prep", "Lab Credits", "DevOps Integration"],
+    journey: [
+      { step: "Cloud Basics", detail: "Global infra and IAM" },
+      { step: "Core Services", detail: "Compute, Storage, Network" },
+      { step: "Architecture", detail: "Scalability and Security" },
+      { step: "Professional", detail: "Certification training" }
+    ],
+    slots: commonSlots,
     modules: [
       "Cloud Concepts & AWS Global Infrastructure",
       "Identity & Access Management (IAM)",
@@ -144,6 +214,15 @@ export const courses: Course[] = [
     students: 11000,
     tags: ["Selenium", "Java", "Manual", "Automation"],
     color: "bg-green-500",
+    salaryRange: "3.5 LPA - 10 LPA",
+    features: ["Mobile Testing", "API Automation", "Bug Tracking"],
+    journey: [
+      { step: "Manual", detail: "STLC and bug reporting" },
+      { step: "Java/Python", detail: "Programming for automation" },
+      { step: "Selenium", detail: "Web automation framework" },
+      { step: "Frameworks", detail: "TestNG, BDD, and CI/CD" }
+    ],
+    slots: commonSlots,
     modules: [
       "Manual Testing Fundamentals",
       "SDLC & STLC",
@@ -165,6 +244,15 @@ export const courses: Course[] = [
     students: 5400,
     tags: ["SAP", "Finance", "Accounting", "ERP"],
     color: "bg-blue-700",
+    salaryRange: "5 LPA - 12 LPA",
+    features: ["Real MNC Data", "S/4HANA Ready", "ERP Experts"],
+    journey: [
+      { step: "SAP Intro", detail: "ERP navigation and infra" },
+      { step: "FI Module", detail: "Financial accounting" },
+      { step: "CO Module", detail: "Management controlling" },
+      { step: "Integration", detail: "Full business cycle" }
+    ],
+    slots: commonSlots,
     modules: [
       "Introduction to ERP & SAP",
       "Financial Accounting (FI)",
@@ -186,6 +274,15 @@ export const courses: Course[] = [
     students: 4900,
     tags: ["SAP", "Logistics", "Inventory", "Procurement"],
     color: "bg-cyan-600",
+    salaryRange: "4.5 LPA - 11 LPA",
+    features: ["Supply Chain Focus", "MNC Case Studies", "Inventory Lab"],
+    journey: [
+      { step: "Procurement", detail: "Vendor management" },
+      { step: "Inventory", detail: "Stock and storage" },
+      { step: "Integration", detail: "MM with FI and SD" },
+      { step: "S/4HANA", detail: "Modern SAP features" }
+    ],
+    slots: commonSlots,
     modules: [
       "SAP MM Overview & Enterprise Structure",
       "Master Data (Material & Vendor)",
@@ -207,6 +304,15 @@ export const courses: Course[] = [
     students: 13200,
     tags: ["CRM", "Apex", "LWC", "Admin"],
     color: "bg-blue-400",
+    salaryRange: "5 LPA - 20 LPA",
+    features: ["Certification Vouchers", "AppExchange Lab", "Trailhead Focus"],
+    journey: [
+      { step: "Admin", detail: "Config and user mgmt" },
+      { step: "Development", detail: "Apex and SOQL" },
+      { step: "LWC", detail: "Modern lightning components" },
+      { step: "Project", detail: "Custom cloud app" }
+    ],
+    slots: commonSlots,
     modules: [
       "Salesforce Admin Essentials",
       "Data Modeling & Management",
@@ -228,6 +334,15 @@ export const courses: Course[] = [
     students: 3500,
     tags: ["ITSM", "ITOM", "Workflow", "Automation"],
     color: "bg-rose-500",
+    salaryRange: "5 LPA - 15 LPA",
+    features: ["CSA Prep", "Scripting Lab", "Workflow Design"],
+    journey: [
+      { step: "Fundamentals", detail: "Platform navigation" },
+      { step: "ITSM", detail: "Incident and change" },
+      { step: "Scripting", detail: "Client and server scripts" },
+      { step: "Integration", detail: "REST and automation" }
+    ],
+    slots: commonSlots,
     modules: [
       "ServiceNow Fundamentals",
       "IT Service Management (ITSM)",
