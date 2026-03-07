@@ -16,15 +16,15 @@ export function Hero() {
           <div className="flex flex-col justify-center space-y-8">
             <div className="space-y-4">
               <Badge variant="outline" className="w-fit rounded-full border-primary/20 bg-primary/5 px-4 py-1 text-primary">
-                🚀 #1 Ranked EdTech for Indian GenZ
+                🚀 TechHub - India's #1 Trusted EdTech
               </Badge>
               <h1 className="font-heading text-4xl font-extrabold tracking-tight sm:text-5xl xl:text-6xl text-foreground">
-                Level Up Your Skills, <br />
-                <span className="text-gradient">Launch Your Career.</span>
+                Master Tech Skills, <br />
+                <span className="text-gradient">Get Placed in Top MNCs.</span>
               </h1>
               <p className="max-w-[600px] text-lg text-muted-foreground md:text-xl">
-                Master Data Science, Full Stack, AWS & SAP with expert mentorship. 
-                Real projects, 100% placement support, and a community that vibes with you.
+                Learn from expert instructors. 10 industry-leading courses from ₹12,000. 
+                100% placement guarantee, lifetime access, and real-world projects.
               </p>
             </div>
 

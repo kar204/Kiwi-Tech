@@ -9,10 +9,10 @@ export function Navbar() {
   const [location] = useLocation();
 
   const navLinks = [
-    { name: "Courses", href: "#courses" },
+    { name: "All Courses", href: "/courses" },
     { name: "Placements", href: "#placements" },
-    { name: "About Us", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -25,7 +25,7 @@ export function Navbar() {
                 <Rocket className="h-6 w-6" />
               </div>
               <span className="font-heading text-2xl font-bold tracking-tight text-foreground">
-                Guru<span className="text-primary">Cool</span>
+                Tech<span className="text-primary">Hub</span>
               </span>
             </a>
           </Link>

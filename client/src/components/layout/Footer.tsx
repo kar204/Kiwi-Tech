@@ -12,11 +12,11 @@ export function Footer() {
                 <Rocket className="h-4 w-4" />
               </div>
               <span className="font-heading text-xl font-bold text-white">
-                Guru<span className="text-primary">Cool</span>
+                Tech<span className="text-primary">Hub</span>
               </span>
             </div>
             <p className="text-sm text-slate-400">
-              India's fastest growing EdTech platform for GenZ. Master the skills that matter today and get placed in top MNCs.
+              India's most trusted online tech training platform. Master in-demand skills with 100% placement support. Affordable courses from ₹12,000.
             </p>
           </div>
 
@@ -24,7 +24,7 @@ export function Footer() {
             <h3 className="mb-4 font-heading text-lg font-semibold text-white">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/"><a className="hover:text-primary">Home</a></Link></li>
-              <li><a href="#courses" className="hover:text-primary">All Courses</a></li>
+              <li><Link href="/courses"><a className="hover:text-primary">All Courses</a></Link></li>
               <li><a href="#placements" className="hover:text-primary">Placements</a></li>
               <li><a href="#about" className="hover:text-primary">About Us</a></li>
             </ul>
@@ -49,7 +49,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary" />
-                <span>hello@gurucool.in</span>
+                <span>hello@techhub.in</span>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-primary" />
@@ -65,7 +65,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t border-slate-800 pt-8 text-center text-sm text-slate-500">
-          © {new Date().getFullYear()} GuruCool. All rights reserved. Made with ❤️ in India.
+          © {new Date().getFullYear()} TechHub. All rights reserved. Made with ❤️ in India.
         </div>
       </div>
     </footer>

@@ -54,12 +54,18 @@ export function CourseCard({ course }: CourseCardProps) {
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-2">
-            {course.tags.slice(0, 3).map((tag) => (
-              <span key={tag} className="inline-flex items-center rounded-md bg-secondary/10 px-2 py-1 text-xs font-medium text-secondary-foreground ring-1 ring-inset ring-secondary/20">
-                {tag}
-              </span>
-            ))}
+          <div className="space-y-2">
+            <div className="flex items-baseline gap-2">
+              <span className="text-2xl font-bold text-primary">₹{course.discountedPrice.toLocaleString()}</span>
+              <span className="text-sm line-through text-slate-400">₹{course.originalPrice.toLocaleString()}</span>
+            </div>
+            <div className="flex flex-wrap gap-1">
+              {course.tags.slice(0, 2).map((tag) => (
+                <span key={tag} className="inline-flex items-center rounded-md bg-secondary/10 px-2 py-1 text-xs font-medium text-secondary-foreground ring-1 ring-inset ring-secondary/20">
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
 
           <Link href={`/course/${course.slug}`}>

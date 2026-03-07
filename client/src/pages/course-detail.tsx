@@ -116,8 +116,17 @@ export default function CourseDetail() {
                 <div className="bg-white rounded-3xl p-8 shadow-2xl border border-white/20 text-slate-900">
                   <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                     <Zap className="text-primary h-6 w-6 fill-primary" />
-                    Join Next Batch
+                    Enroll Now
                   </h3>
+
+                  <div className="mb-8 p-6 rounded-2xl bg-primary/5 border border-primary/20">
+                    <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold mb-2">Special Offer</p>
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-4xl font-bold text-primary">₹{course.discountedPrice.toLocaleString()}</span>
+                      <span className="text-lg line-through text-slate-400">₹{course.originalPrice.toLocaleString()}</span>
+                    </div>
+                    <p className="text-xs text-primary font-semibold mt-2">{Math.round((1 - course.discountedPrice / course.originalPrice) * 100)}% OFF</p>
+                  </div>
                   
                   <div className="space-y-4 mb-8">
                     <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex justify-between items-center">
