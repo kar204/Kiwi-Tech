@@ -2,10 +2,12 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";
 import { PlacementMarquee } from "@/components/home/PlacementMarquee";
+import { PlacementsSection } from "@/components/home/PlacementsSection";
 import { CourseCard } from "@/components/courses/CourseCard";
 import { courses } from "@/lib/courses";
 import { ArrowRight, Trophy, Users, Globe2, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -15,6 +17,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <PlacementMarquee />
+        <PlacementsSection />
 
         {/* Stats Section */}
         <section className="py-20 bg-white">
@@ -70,8 +73,16 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {courses.map((course) => (
-                <CourseCard key={course.id} course={course} />
+              {courses.map((course, i) => (
+                <motion.div
+                  key={course.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.05 }}
+                >
+                  <CourseCard course={course} />
+                </motion.div>
               ))}
             </div>
 
