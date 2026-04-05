@@ -12,7 +12,7 @@ export function Footer() {
                 <Rocket className="h-4 w-4" />
               </div>
               <span className="font-heading text-xl font-bold text-white">
-                Tech<span className="text-primary">Hub</span>
+                Skill<span className="text-primary">Nex</span>
               </span>
             </div>
             <p className="text-sm text-slate-400">
@@ -67,7 +67,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t border-slate-800 pt-8 text-center text-sm text-slate-500">
-          © {new Date().getFullYear()} TechHub. All rights reserved. Made with ❤️ in India.
+          © {new Date().getFullYear()} SkillNex. All rights reserved. Made with ❤️ in India.
         </div>
       </div>
     </footer>

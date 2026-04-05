@@ -36,12 +36,12 @@ export default function About() {
               animate={{ opacity: 1, y: 0 }}
               className="max-w-3xl"
             >
-              <Badge className="bg-primary/20 text-primary border-primary/30 mb-6">About TechHub</Badge>
+              <Badge className="bg-primary/20 text-primary border-primary/30 mb-6">About SkillNex</Badge>
               <h1 className="font-heading text-5xl font-bold mb-6">
                 Empowering India's Future <span className="text-primary">Tech Leaders</span>
               </h1>
               <p className="text-xl text-slate-300">
-                TechHub is India's most trusted online tech training platform. We partner with students and professionals to master in-demand skills, get placed in top MNCs, and launch thriving tech careers.
+                SkillNex is India's most trusted online tech training platform. We partner with students and professionals to master in-demand skills, get placed in top MNCs, and launch thriving tech careers.
               </p>
             </motion.div>
           </div>
@@ -71,11 +71,11 @@ export default function About() {
           </div>
         </section>
 
-        {/* Why TechHub */}
+        {/* Why SkillNex */}
         <section className="py-20 bg-slate-50">
           <div className="container mx-auto px-4 md:px-6">
             <h2 className="font-heading text-4xl font-bold text-center mb-16">
-              Why Choose <span className="text-primary">TechHub?</span>
+              Why Choose <span className="text-primary">SkillNex?</span>
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">

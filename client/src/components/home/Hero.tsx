@@ -16,7 +16,7 @@ export function Hero() {
           <div className="flex flex-col justify-center space-y-8">
             <div className="space-y-4">
               <Badge variant="outline" className="w-fit rounded-full border-primary/20 bg-primary/5 px-4 py-1 text-primary">
-                🚀 TechHub - India's #1 Trusted EdTech
+                🚀 SkillNex - India's #1 Trusted EdTech
               </Badge>
               <h1 className="font-heading text-4xl font-extrabold tracking-tight sm:text-5xl xl:text-6xl text-foreground">
                 Master Tech Skills, <br />

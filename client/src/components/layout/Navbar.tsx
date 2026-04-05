@@ -26,7 +26,7 @@ export function Navbar() {
                 <Rocket className="h-6 w-6" />
               </div>
               <span className="font-heading text-2xl font-bold tracking-tight text-foreground">
-                Tech<span className="text-primary">Hub</span>
+                Skill<span className="text-primary">Nex</span>
               </span>
             </a>
           </Link>

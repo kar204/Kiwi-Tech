@@ -53,7 +53,7 @@ export default function Bootcamp() {
               transition={{ delay: 0.1 }}
               className="text-4xl md:text-6xl font-bold font-heading mb-6 leading-tight"
             >
-              Experience The Future of Learning with <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-primary">TechHub Bootcamps</span>
+              Experience The Future of Learning with <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-primary">SkillNex Bootcamps</span>
             </motion.h1>
             
             <motion.p 
