@@ -5,6 +5,12 @@ import { Footer } from "@/components/layout/Footer";
 import NotFound from "@/pages/not-found";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { 
   CheckCircle2, 
   Clock, 
@@ -276,72 +282,115 @@ export default function CourseDetail() {
         </section>
 
         {/* Features & Syllabus */}
-        <section className="py-24 bg-slate-50">
+        <section className="py-24 bg-slate-50 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
           <div className="container mx-auto px-4 md:px-6">
-            <div className="grid lg:grid-cols-2 gap-20">
-              <div className="space-y-12">
-                <div className="space-y-6">
-                  <h2 className="font-heading text-3xl font-bold flex items-center gap-3">
-                    <BookOpen className="text-primary h-8 w-8" />
+            <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
+              <div className="lg:col-span-7 xl:col-span-8 space-y-12">
+                <div className="space-y-8">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm">
+                    <BookOpen className="h-4 w-4" /> Course Curriculum
+                  </div>
+                  <h2 className="font-heading text-4xl lg:text-5xl font-bold leading-tight">
                     Comprehensive <span className="text-primary">Syllabus</span>
                   </h2>
-                  <div className="grid gap-4">
-                    {course.modules.map((module, i) => (
-                      <div key={i} className="flex flex-col gap-3 p-6 rounded-2xl bg-white border border-slate-200 hover:border-primary/40 hover:shadow-md transition-all cursor-default group">
-                        <div className="flex items-center gap-4">
-                          <div className={`h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-all`}>
-                            <span className="font-bold text-primary group-hover:text-white">{i + 1}</span>
-                          </div>
-                          <span className="font-bold text-slate-800 text-lg block">{module.title}</span>
-                        </div>
-                        <ul className="pl-14 space-y-2">
-                          {module.topics.map((topic, idx) => (
-                            <li key={idx} className="text-sm text-slate-600 flex items-start gap-2">
-                              <div className="h-1.5 w-1.5 rounded-full bg-primary/40 mt-1.5 shrink-0" />
-                              {topic}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
+                  <p className="text-lg text-slate-500 max-w-2xl">
+                    Master the skills that top employers demand. Our curriculum is designed by industry experts and regularly updated to match current market trends.
+                  </p>
+                  
+                  <div className="pt-6 relative before:absolute before:inset-y-8 before:left-[2.25rem] before:w-0.5 before:bg-slate-200">
+                    <Accordion type="single" collapsible className="w-full space-y-4 relative z-10" defaultValue="item-0">
+                      {course.modules.map((module, i) => (
+                        <AccordionItem 
+                          key={i} 
+                          value={`item-${i}`}
+                          className="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 overflow-hidden"
+                        >
+                          <AccordionTrigger className="px-6 py-5 hover:no-underline [&[data-state=open]>div>div:first-child]:bg-primary [&[data-state=open]>div>div:first-child]:text-white [&[data-state=open]>div>div:first-child]:border-primary">
+                            <div className="flex items-center gap-5 text-left">
+                              <div className="w-10 h-10 rounded-full bg-slate-50 border-2 border-slate-100 flex items-center justify-center font-bold text-slate-500 transition-colors shrink-0">
+                                {i + 1}
+                              </div>
+                              <div>
+                                <h3 className="font-bold text-lg text-slate-900 leading-tight">{module.title}</h3>
+                                <p className="text-sm text-slate-500 font-normal mt-1">{module.topics.length} Topics Covered</p>
+                              </div>
+                            </div>
+                          </AccordionTrigger>
+                          <AccordionContent className="px-6 pb-6 pt-2 pl-[5.25rem]">
+                            <ul className="grid sm:grid-cols-2 gap-y-3 gap-x-6">
+                              {module.topics.map((topic, idx) => (
+                                <li key={idx} className="flex items-start gap-3">
+                                  <div className="mt-1 bg-primary/10 p-1 rounded-md shrink-0">
+                                    <CheckCircle2 className="h-3 w-3 text-primary" />
+                                  </div>
+                                  <span className="text-slate-600 font-medium leading-tight">{topic}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </AccordionContent>
+                        </AccordionItem>
+                      ))}
+                    </Accordion>
                   </div>
-                  <Button 
-                    onClick={handleDownload}
-                    variant="outline" 
-                    className="w-full h-12 rounded-xl border-primary text-primary hover:bg-primary/5 font-bold"
-                  >
-                    <Download className="mr-2 h-4 w-4" /> Download Complete Course PDF
-                  </Button>
+                  
+                  <div className="pt-8 pl-24">
+                    <Button 
+                      onClick={handleDownload}
+                      size="lg"
+                      className="w-full sm:w-auto h-14 px-8 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-bold shadow-xl shadow-slate-900/20"
+                    >
+                      <Download className="mr-2 h-5 w-5" /> Download Full PDF Syllabus
+                    </Button>
+                  </div>
                 </div>
               </div>
 
-              <div className="space-y-12">
-                <div className="bg-slate-900 rounded-[2.5rem] p-12 text-white relative overflow-hidden">
-                  <div className="absolute top-0 right-0 p-8 opacity-10">
-                    <Rocket className="h-40 w-40" />
-                  </div>
-                  <h3 className="font-heading text-3xl font-bold mb-8">What Makes Us <span className="text-primary">Unique?</span></h3>
-                  <div className="grid gap-8">
-                    {course.features.map((feature, i) => (
-                      <div key={i} className="flex gap-5">
-                        <div className="h-14 w-14 rounded-2xl bg-white/10 flex items-center justify-center shrink-0">
-                          {i === 0 ? <Users className="h-6 w-6 text-primary" /> : i === 1 ? <Trophy className="h-6 w-6 text-primary" /> : <Globe className="h-6 w-6 text-primary" />}
+              <div className="lg:col-span-5 xl:col-span-4">
+                <div className="sticky top-24 space-y-8">
+                  <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-[2.5rem] p-10 text-white relative overflow-hidden shadow-2xl">
+                    <div className="absolute -right-10 -top-10 opacity-10">
+                      <Rocket className="h-64 w-64" />
+                    </div>
+                    
+                    <h3 className="font-heading text-3xl font-bold mb-10 relative z-10">
+                      What Makes Us <span className="text-primary">Unique?</span>
+                    </h3>
+                    
+                    <div className="grid gap-8 relative z-10">
+                      {course.features.map((feature, i) => (
+                        <div key={i} className="flex gap-5 group">
+                          <div className="h-14 w-14 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:border-primary transition-colors duration-300">
+                            {i === 0 ? <Users className="h-6 w-6 text-white" /> : i === 1 ? <Trophy className="h-6 w-6 text-white" /> : <Globe className="h-6 w-6 text-white" />}
+                          </div>
+                          <div>
+                            <h4 className="text-lg font-bold mb-1">{feature}</h4>
+                            <p className="text-slate-400 text-sm leading-relaxed">Real-world training focused on landing you a top-tier job.</p>
+                          </div>
                         </div>
-                        <div>
-                          <h4 className="text-xl font-bold mb-1">{feature}</h4>
-                          <p className="text-slate-400 text-sm">Real-world training focused on landing you a top-tier job.</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="mt-12 pt-12 border-t border-white/10 text-center">
-                    <p className="text-sm text-slate-400 mb-6 font-medium">Trusted by Hiring Managers from</p>
-                    <div className="flex flex-wrap justify-center gap-6 opacity-30 grayscale invert">
-                      {['Google', 'Amazon', 'TCS', 'Wipro'].map(brand => (
-                        <span key={brand} className="text-xl font-bold">{brand}</span>
                       ))}
                     </div>
+                    
+                    <div className="mt-12 pt-10 border-t border-white/10 text-center relative z-10">
+                      <p className="text-sm text-slate-400 mb-6 font-medium uppercase tracking-wider">Trusted by Hiring Partners</p>
+                      <div className="flex flex-wrap justify-center gap-6 opacity-40">
+                        {['Google', 'Amazon', 'TCS', 'Wipro'].map(brand => (
+                          <span key={brand} className="text-xl font-bold tracking-tight">{brand}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Need Help Card */}
+                  <div className="bg-primary/5 rounded-3xl p-8 border border-primary/10 text-center">
+                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm text-primary">
+                      <Zap className="h-8 w-8" />
+                    </div>
+                    <h4 className="font-bold text-xl mb-3 text-slate-900">Need Help Choosing?</h4>
+                    <p className="text-slate-500 mb-6 text-sm">Speak with our career counselors to find the right path for you.</p>
+                    <Button variant="outline" className="w-full bg-white hover:bg-slate-50 font-bold border-slate-200">
+                      Request Callback
+                    </Button>
                   </div>
                 </div>
               </div>
