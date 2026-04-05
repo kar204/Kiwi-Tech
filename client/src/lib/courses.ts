@@ -36,7 +36,7 @@ export interface Course {
   tags: string[];
   tools: { name: string; icon: string }[];
   color: string;
-  modules: string[];
+  modules: { title: string; topics: string[] }[];
   journey: JourneyStep[];
   slots: TimeSlot[];
   features: string[];
@@ -79,7 +79,7 @@ export const courses: Course[] = [
     color: "bg-blue-500",
     salaryRange: "3 LPA - 8 LPA",
     originalPrice: 36000,
-    discountedPrice: 16500,
+    discountedPrice: 19999,
     guaranteeText: "Join Our 100% Job Guaranteed",
     targetRole: "Data Analyst",
     bullets: [
@@ -126,14 +126,38 @@ export const courses: Course[] = [
     ],
     slots: commonSlots,
     modules: [
-      "Introduction to Data Analytics",
-      "Advanced Excel & Macros",
-      "SQL for Data Science",
-      "Data Visualization with PowerBI",
-      "Tableau Dashboarding",
-      "Python Programming Basics",
-      "Pandas & NumPy for Data Manipulation",
-      "Capstone Project"
+      {
+        title: "Overview of Data Analytics Course",
+        topics: ["Introduction to Data Analytics", "Data Analytics vs Data Science", "Roles and Responsibilities of a Data Analyst", "Data Analytics Lifecycle"]
+      },
+      {
+        title: "Excel for Data Analytics",
+        topics: ["Data cleaning and formatting", "Advanced formulas and functions", "Pivot Tables and Dashboards", "Data Analysis ToolPak"]
+      },
+      {
+        title: "SQL for Databases",
+        topics: ["RDBMS fundamentals", "Writing complex queries and joins", "Grouping, filtering, and subqueries", "Window functions"]
+      },
+      {
+        title: "Python for Data Analysis",
+        topics: ["Python programming basics", "Data manipulation with Pandas", "Numerical operations with NumPy", "Data visualization with Matplotlib & Seaborn"]
+      },
+      {
+        title: "Data Visualization with Power BI",
+        topics: ["Connecting to data sources", "Data modeling and DAX", "Creating interactive dashboards", "Publishing and sharing reports"]
+      },
+      {
+        title: "Tableau for Business Intelligence",
+        topics: ["Tableau interface and connections", "Building charts and graphs", "Calculated fields and parameters", "Storytelling with data"]
+      },
+      {
+        title: "Real-time Projects & Case Studies",
+        topics: ["E-commerce sales analysis", "Financial data reporting", "Customer churn prediction", "Capstone project presentation"]
+      },
+      {
+        title: "Career Preparation",
+        topics: ["Resume building workshop", "Mock interviews with industry experts", "LinkedIn profile optimization", "Placement assistance"]
+      }
     ]
   },
   {
@@ -182,12 +206,30 @@ export const courses: Course[] = [
     ],
     slots: commonSlots,
     modules: [
-      "Python Programming Fundamentals",
-      "Statistics & Probability",
-      "Machine Learning Algorithms",
-      "Deep Learning & Neural Networks",
-      "Natural Language Processing (NLP)",
-      "Generative AI & LLMs"
+      {
+        title: "Python Programming Fundamentals",
+        topics: ["Python Basics", "Data Structures", "Functions", "OOPs in Python"]
+      },
+      {
+        title: "Statistics & Probability",
+        topics: ["Descriptive Statistics", "Inferential Statistics", "Probability Distributions", "Hypothesis Testing"]
+      },
+      {
+        title: "Machine Learning Algorithms",
+        topics: ["Supervised Learning", "Unsupervised Learning", "Ensemble Methods", "Model Evaluation"]
+      },
+      {
+        title: "Deep Learning & Neural Networks",
+        topics: ["Artificial Neural Networks", "Convolutional Neural Networks", "Recurrent Neural Networks", "Optimization Techniques"]
+      },
+      {
+        title: "Natural Language Processing (NLP)",
+        topics: ["Text Processing", "Sentiment Analysis", "Named Entity Recognition", "Word Embeddings"]
+      },
+      {
+        title: "Generative AI & LLMs",
+        topics: ["Introduction to Gen AI", "Large Language Models", "Prompt Engineering", "Fine-tuning Models"]
+      }
     ]
   },
   {
@@ -236,12 +278,30 @@ export const courses: Course[] = [
     ],
     slots: commonSlots,
     modules: [
-      "Core Java & Collections",
-      "Advanced Java (J2EE)",
-      "Spring Framework & Spring Boot",
-      "Frontend with React.js",
-      "Database Management (MySQL)",
-      "Microservices Architecture"
+      {
+        title: "Core Java & Collections",
+        topics: ["Java Basics", "OOPs Concepts", "Exception Handling", "Java Collections Framework"]
+      },
+      {
+        title: "Advanced Java (J2EE)",
+        topics: ["JDBC", "Servlets", "JSP", "JSTL"]
+      },
+      {
+        title: "Spring Framework & Spring Boot",
+        topics: ["Dependency Injection", "Spring MVC", "Spring Boot Auto-configuration", "RESTful APIs with Spring Boot"]
+      },
+      {
+        title: "Frontend with React.js",
+        topics: ["React Components", "State and Props", "React Hooks", "Routing with React Router"]
+      },
+      {
+        title: "Database Management (MySQL)",
+        topics: ["Relational Database Concepts", "SQL Queries", "Joins and Subqueries", "Database Design"]
+      },
+      {
+        title: "Microservices Architecture",
+        topics: ["Microservices Principles", "Spring Cloud", "Service Discovery", "API Gateway"]
+      }
     ]
   },
   {
@@ -290,12 +350,30 @@ export const courses: Course[] = [
     ],
     slots: commonSlots,
     modules: [
-      "Python Core & Advanced",
-      "Web Frameworks (Django/Flask)",
-      "Frontend Development (HTML/CSS/JS)",
-      "React.js Integration",
-      "REST API Development",
-      "Deployment on AWS"
+      {
+        title: "Python Core & Advanced",
+        topics: ["Python Syntax", "Data Types", "Decorators", "Generators"]
+      },
+      {
+        title: "Web Frameworks (Django/Flask)",
+        topics: ["Django MVC", "Flask Routing", "Templates", "Forms and Validation"]
+      },
+      {
+        title: "Frontend Development (HTML/CSS/JS)",
+        topics: ["HTML5", "CSS3 Basics", "JavaScript ES6", "DOM Manipulation"]
+      },
+      {
+        title: "React.js Integration",
+        topics: ["React Basics", "Component Lifecycle", "Hooks", "Integrating with Backend"]
+      },
+      {
+        title: "REST API Development",
+        topics: ["API Concepts", "Django REST Framework", "Authentication", "Serialization"]
+      },
+      {
+        title: "Deployment on AWS",
+        topics: ["AWS EC2", "S3 Storage", "RDS", "Deploying Django Apps"]
+      }
     ]
   },
   {
@@ -344,12 +422,30 @@ export const courses: Course[] = [
     ],
     slots: commonSlots,
     modules: [
-      "Cloud Concepts & AWS Global Infrastructure",
-      "Identity & Access Management (IAM)",
-      "Compute Services (EC2, Lambda)",
-      "Storage Services (S3, EBS)",
-      "Networking & Content Delivery (VPC, CloudFront)",
-      "AWS Certified Solutions Architect Prep"
+      {
+        title: "Cloud Concepts & AWS Global Infrastructure",
+        topics: ["Cloud Computing Basics", "AWS Regions and Availability Zones", "AWS Shared Responsibility Model", "AWS Pricing Models"]
+      },
+      {
+        title: "Identity & Access Management (IAM)",
+        topics: ["IAM Users and Groups", "IAM Policies and Permissions", "IAM Roles", "Multi-Factor Authentication (MFA)"]
+      },
+      {
+        title: "Compute Services (EC2, Lambda)",
+        topics: ["EC2 Instances", "Auto Scaling Groups", "Elastic Load Balancing", "AWS Lambda Serverless"]
+      },
+      {
+        title: "Storage Services (S3, EBS)",
+        topics: ["Amazon S3 Buckets", "S3 Storage Classes", "Elastic Block Store (EBS)", "EFS and FSx"]
+      },
+      {
+        title: "Networking & Content Delivery (VPC, CloudFront)",
+        topics: ["Virtual Private Cloud (VPC)", "Subnets and Route Tables", "Security Groups and NACLs", "Amazon CloudFront CDN"]
+      },
+      {
+        title: "AWS Certified Solutions Architect Prep",
+        topics: ["Exam Strategy", "Practice Questions", "Reviewing Architectures", "Mock Exams"]
+      }
     ]
   },
   {
@@ -398,12 +494,30 @@ export const courses: Course[] = [
     ],
     slots: commonSlots,
     modules: [
-      "Manual Testing Fundamentals",
-      "SDLC & STLC",
-      "Automation with Selenium WebDriver",
-      "TestNG & JUnit Frameworks",
-      "API Testing with Postman",
-      "Cucumber & BDD"
+      {
+        title: "Manual Testing Fundamentals",
+        topics: ["Software Testing Basics", "Testing Types", "Test Case Design", "Defect Life Cycle"]
+      },
+      {
+        title: "SDLC & STLC",
+        topics: ["Software Development Life Cycle Models", "Software Testing Life Cycle Phases", "Agile Methodology", "Scrum Framework"]
+      },
+      {
+        title: "Automation with Selenium WebDriver",
+        topics: ["Selenium Architecture", "Locators in Selenium", "Handling Web Elements", "Synchronization in Selenium"]
+      },
+      {
+        title: "TestNG & JUnit Frameworks",
+        topics: ["TestNG Annotations", "Assertions", "Data Providers", "Grouping Tests"]
+      },
+      {
+        title: "API Testing with Postman",
+        topics: ["API Basics", "HTTP Methods", "Postman Collections", "Automating API Tests"]
+      },
+      {
+        title: "Cucumber & BDD",
+        topics: ["Behavior Driven Development", "Gherkin Syntax", "Step Definitions", "Cucumber Options"]
+      }
     ]
   },
   {
@@ -424,7 +538,7 @@ export const courses: Course[] = [
     color: "bg-blue-700",
     salaryRange: "5 LPA - 12 LPA",
     originalPrice: 45000,
-    discountedPrice: 24999,
+    discountedPrice: 19999,
     features: ["Real MNC Data", "S/4HANA Ready", "ERP Experts"],
     journey: [
       { 
@@ -450,12 +564,30 @@ export const courses: Course[] = [
     ],
     slots: commonSlots,
     modules: [
-      "Introduction to ERP & SAP",
-      "Financial Accounting (FI)",
-      "General Ledger Accounting",
-      "Accounts Payable & Receivable",
-      "Controlling (CO)",
-      "Asset Accounting"
+      {
+        title: "Introduction to ERP & SAP",
+        topics: ["ERP Concepts", "SAP Architecture", "SAP Landscape", "Navigation in SAP"]
+      },
+      {
+        title: "Financial Accounting (FI)",
+        topics: ["Organizational Structure", "Financial Accounting Global Settings", "Document Types", "Posting Keys"]
+      },
+      {
+        title: "General Ledger Accounting",
+        topics: ["Chart of Accounts", "G/L Account Master Data", "Document Entry", "Parked Documents"]
+      },
+      {
+        title: "Accounts Payable & Receivable",
+        topics: ["Vendor Master Data", "Customer Master Data", "Invoice Processing", "Payment Run"]
+      },
+      {
+        title: "Controlling (CO)",
+        topics: ["Cost Element Accounting", "Cost Center Accounting", "Internal Orders", "Profit Center Accounting"]
+      },
+      {
+        title: "Asset Accounting",
+        topics: ["Asset Master Data", "Asset Acquisition", "Depreciation Run", "Asset Retirement"]
+      }
     ]
   },
   {
@@ -476,7 +608,7 @@ export const courses: Course[] = [
     color: "bg-cyan-600",
     salaryRange: "4.5 LPA - 11 LPA",
     originalPrice: 45000,
-    discountedPrice: 24999,
+    discountedPrice: 19999,
     features: ["Supply Chain Focus", "MNC Case Studies", "Inventory Lab"],
     journey: [
       { 
@@ -502,12 +634,30 @@ export const courses: Course[] = [
     ],
     slots: commonSlots,
     modules: [
-      "SAP MM Overview & Enterprise Structure",
-      "Master Data (Material & Vendor)",
-      "Procurement Process",
-      "Inventory Management",
-      "Invoice Verification",
-      "Integration with FI/SD"
+      {
+        title: "SAP MM Overview & Enterprise Structure",
+        topics: ["Introduction to SAP MM", "Organizational Units", "Plant and Storage Location", "Purchasing Organization"]
+      },
+      {
+        title: "Master Data (Material & Vendor)",
+        topics: ["Material Master Record", "Vendor Master Record", "Purchasing Info Record", "Source List"]
+      },
+      {
+        title: "Procurement Process",
+        topics: ["Purchase Requisition", "Request for Quotation", "Purchase Order", "Outline Agreements"]
+      },
+      {
+        title: "Inventory Management",
+        topics: ["Goods Receipt", "Goods Issue", "Transfer Posting", "Physical Inventory"]
+      },
+      {
+        title: "Invoice Verification",
+        topics: ["Logistics Invoice Verification", "Invoice Entry", "Credit Memos", "Subsequent Debits/Credits"]
+      },
+      {
+        title: "Integration with FI/SD",
+        topics: ["Automatic Account Determination", "Valuation Classes", "Movement Types", "Integration Points"]
+      }
     ]
   },
   {
@@ -528,7 +678,7 @@ export const courses: Course[] = [
     color: "bg-blue-400",
     salaryRange: "5 LPA - 20 LPA",
     originalPrice: 45000,
-    discountedPrice: 24999,
+    discountedPrice: 19999,
     features: ["Certification Vouchers", "AppExchange Lab", "Trailhead Focus"],
     journey: [
       { 
@@ -554,12 +704,30 @@ export const courses: Course[] = [
     ],
     slots: commonSlots,
     modules: [
-      "Salesforce Admin Essentials",
-      "Data Modeling & Management",
-      "Security & User Management",
-      "Salesforce Development (Apex)",
-      "Visualforce & Lightning Components",
-      "AppExchange & Deployment"
+      {
+        title: "Salesforce Admin Essentials",
+        topics: ["Salesforce Basics", "Company Profile", "User Setup", "Security Controls"]
+      },
+      {
+        title: "Data Modeling & Management",
+        topics: ["Standard and Custom Objects", "Relationships", "Data Import Wizard", "Data Loader"]
+      },
+      {
+        title: "Security & User Management",
+        topics: ["Profiles and Permission Sets", "Role Hierarchy", "Sharing Rules", "Field-Level Security"]
+      },
+      {
+        title: "Salesforce Development (Apex)",
+        topics: ["Apex Fundamentals", "SOQL and SOSL", "Apex Triggers", "Apex Classes"]
+      },
+      {
+        title: "Visualforce & Lightning Components",
+        topics: ["Visualforce Pages", "Standard Controllers", "Aura Components", "Lightning Web Components (LWC)"]
+      },
+      {
+        title: "AppExchange & Deployment",
+        topics: ["AppExchange Overview", "Change Sets", "Ant Migration Tool", "Salesforce DX"]
+      }
     ]
   },
   {
@@ -580,7 +748,7 @@ export const courses: Course[] = [
     color: "bg-rose-500",
     salaryRange: "5 LPA - 15 LPA",
     originalPrice: 45000,
-    discountedPrice: 24999,
+    discountedPrice: 19999,
     features: ["CSA Prep", "Scripting Lab", "Workflow Design"],
     journey: [
       { 
@@ -606,12 +774,30 @@ export const courses: Course[] = [
     ],
     slots: commonSlots,
     modules: [
-      "ServiceNow Fundamentals",
-      "IT Service Management (ITSM)",
-      "Incident, Problem & Change Management",
-      "Service Catalog & Workflows",
-      "Scripting in ServiceNow",
-      "CMDB & Discovery"
+      {
+        title: "ServiceNow Fundamentals",
+        topics: ["ServiceNow Interface", "Lists and Forms", "Filters and Breadcrumbs", "User Customization"]
+      },
+      {
+        title: "IT Service Management (ITSM)",
+        topics: ["ITIL Overview", "Incident Management", "Problem Management", "Change Management"]
+      },
+      {
+        title: "Incident, Problem & Change Management",
+        topics: ["Creating Incidents", "Problem Investigations", "Change Requests", "Approvals and Tasks"]
+      },
+      {
+        title: "Service Catalog & Workflows",
+        topics: ["Catalog Items", "Record Producers", "Order Guides", "Workflow Editor"]
+      },
+      {
+        title: "Scripting in ServiceNow",
+        topics: ["Client Scripts", "UI Policies", "Business Rules", "Script Includes"]
+      },
+      {
+        title: "CMDB & Discovery",
+        topics: ["Configuration Management Database", "Configuration Items", "ServiceNow Discovery", "MID Server"]
+      }
     ]
   }
 ];

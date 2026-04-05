@@ -243,8 +243,8 @@ export default function CourseDetail() {
         <section className="py-24 bg-white overflow-hidden">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-3xl mx-auto mb-20">
-              <h2 className="font-heading text-4xl font-bold mb-6">Your Learning <span className="text-primary">Journey</span></h2>
-              <p className="text-slate-500 text-lg">A structured path from beginner to industry-ready professional. Click on any step to see more details.</p>
+              <h2 className="font-heading text-4xl font-bold mb-6">Key Tools <span className="text-primary">Covered</span></h2>
+              <p className="text-slate-500 text-lg">Industry standard tools and frameworks taught in our extensive curriculum.</p>
             </div>
 
             <div className="relative">
@@ -265,7 +265,7 @@ export default function CourseDetail() {
                     <h4 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">{step.step}</h4>
                     <p className="text-slate-500 text-sm leading-relaxed mb-4">{step.detail}</p>
                     <div className="mt-auto flex items-center text-primary font-bold text-xs uppercase tracking-widest">
-                      Show Details <Info className="ml-1 h-3 w-3" />
+                      Read More <Info className="ml-1 h-3 w-3" />
                     </div>
                   </motion.div>
                 ))}
@@ -280,14 +280,27 @@ export default function CourseDetail() {
             <div className="grid lg:grid-cols-2 gap-20">
               <div className="space-y-12">
                 <div className="space-y-6">
-                  <h2 className="font-heading text-3xl font-bold">Comprehensive <span className="text-primary">Syllabus</span></h2>
+                  <h2 className="font-heading text-3xl font-bold flex items-center gap-3">
+                    <BookOpen className="text-primary h-8 w-8" />
+                    Comprehensive <span className="text-primary">Syllabus</span>
+                  </h2>
                   <div className="grid gap-4">
                     {course.modules.map((module, i) => (
-                      <div key={i} className="flex items-center gap-4 p-5 rounded-2xl bg-white border border-slate-200 hover:border-primary/40 transition-all cursor-default group shadow-sm">
-                        <div className={`h-8 w-8 rounded-lg ${course.color} bg-opacity-10 flex items-center justify-center shrink-0 group-hover:bg-opacity-100 transition-all`}>
-                          <CheckCircle2 className={`h-4 w-4 ${course.color.replace('bg-', 'text-')} group-hover:text-white`} />
+                      <div key={i} className="flex flex-col gap-3 p-6 rounded-2xl bg-white border border-slate-200 hover:border-primary/40 hover:shadow-md transition-all cursor-default group">
+                        <div className="flex items-center gap-4">
+                          <div className={`h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-all`}>
+                            <span className="font-bold text-primary group-hover:text-white">{i + 1}</span>
+                          </div>
+                          <span className="font-bold text-slate-800 text-lg block">{module.title}</span>
                         </div>
-                        <span className="font-bold text-slate-700">{module}</span>
+                        <ul className="pl-14 space-y-2">
+                          {module.topics.map((topic, idx) => (
+                            <li key={idx} className="text-sm text-slate-600 flex items-start gap-2">
+                              <div className="h-1.5 w-1.5 rounded-full bg-primary/40 mt-1.5 shrink-0" />
+                              {topic}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     ))}
                   </div>
