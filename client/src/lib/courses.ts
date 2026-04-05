@@ -43,6 +43,10 @@ export interface Course {
   salaryRange: string;
   originalPrice: number;
   discountedPrice: number;
+  stats?: { label: string; value: string }[];
+  guaranteeText?: string;
+  bullets?: string[];
+  targetRole?: string;
 }
 
 const commonSlots: TimeSlot[] = [
@@ -69,33 +73,55 @@ export const courses: Course[] = [
       { name: "Excel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/excel/excel-original.svg" },
       { name: "SQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
       { name: "PowerBI", icon: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" },
-      { name: "Tableau", icon: "https://cdn.worldvectorlogo.com/logos/tableau-software.svg" }
+      { name: "Tableau", icon: "https://cdn.worldvectorlogo.com/logos/tableau-software.svg" },
+      { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" }
     ],
     color: "bg-blue-500",
-    salaryRange: "4 LPA - 12 LPA",
-    originalPrice: 35000,
-    discountedPrice: 19999,
-    features: ["100% Placement Guarantee", "NASSCOM Certified", "Hands-on Projects"],
+    salaryRange: "3 LPA - 8 LPA",
+    originalPrice: 36000,
+    discountedPrice: 16500,
+    guaranteeText: "Join Our 100% Job Guaranteed",
+    targetRole: "Data Analyst",
+    bullets: [
+      "Join Our Best Data Analytics Training Institute to Master Data Handling and Visualization.",
+      "Complete Data Analytics Training – Covers Excel, SQL, Python, Power BI and Tableau.",
+      "Engage in Real-time Projects and Acquire Useful Skills With Hands-on Learning Experiences.",
+      "Choose Flexible Learning Modes Weekday, Weekend or Fast-track Tailored to Your Schedule.",
+      "Advance Your Skills with a Data Analytics Certification Course and Placement Support.",
+      "Get Guidance for Resume Building, Interview Prep and Career Advancement Strategies."
+    ],
+    features: [
+      "Smarter Decision-Making", 
+      "Lucrative Career Prospects", 
+      "Enhanced Organizational Productivity", 
+      "Develops Analytical and Critical Thinking"
+    ],
+    stats: [
+      { label: "Freshers To IT", value: "11,600+" },
+      { label: "NON-IT To IT", value: "6,322+" },
+      { label: "Career Gap", value: "8,700+" },
+      { label: "Less Then 60%", value: "4,640+" }
+    ],
     journey: [
       { 
-        step: "Fundamentals", 
-        detail: "Excel mastery and basic statistics",
-        extendedInfo: "Deep dive into Pivot Tables, VLOOKUP, HLOOKUP, and descriptive statistics to build a solid data foundation."
+        step: "Excel for Data Preparation", 
+        detail: "Organizing, filtering and calculations",
+        extendedInfo: "Microsoft Excel remains a vital starting point for analytics learners. It helps with organizing, filtering and performing basic calculations on data. With features like pivot tables and charts, Excel makes data exploration intuitive."
       },
       { 
-        step: "SQL Mastery", 
-        detail: "Advanced database querying",
-        extendedInfo: "Learn Joins, Subqueries, Stored Procedures, and Window Functions using MySQL and PostgreSQL."
+        step: "SQL for Databases", 
+        detail: "Retrieving and organizing data",
+        extendedInfo: "SQL (Structured Query Language) is crucial for retrieving and organizing data from databases. It allows you to filter, join and summarize data efficiently. SQL skills are essential for handling large-scale structured data in projects."
       },
       { 
-        step: "Visualization", 
-        detail: "PowerBI and Tableau dashboarding",
-        extendedInfo: "Create interactive stories using DAX in PowerBI and advanced calculations in Tableau."
+        step: "Python for Analysis", 
+        detail: "Manipulation, visuals and automation",
+        extendedInfo: "Python’s versatility makes it a preferred programming language in analytics. You will explore libraries like Pandas for data manipulation, Matplotlib for visuals and NumPy for numerical tasks. Python also supports automation, saving time on repetitive processes."
       },
       { 
-        step: "Capstone", 
-        detail: "Real-world data project",
-        extendedInfo: "End-to-end analysis of a retail dataset, predicting sales trends and identifying churn patterns for a business."
+        step: "Tableau & Power BI", 
+        detail: "Interactive Visuals and reporting",
+        extendedInfo: "Tableau is an intuitive visualization platform used to convert raw data into clear visuals. Power BI connects with Excel, SQL and cloud services for real-time analysis. You can build interactive dashboards and share insights across departments."
       }
     ],
     slots: commonSlots,
@@ -105,6 +131,8 @@ export const courses: Course[] = [
       "SQL for Data Science",
       "Data Visualization with PowerBI",
       "Tableau Dashboarding",
+      "Python Programming Basics",
+      "Pandas & NumPy for Data Manipulation",
       "Capstone Project"
     ]
   },

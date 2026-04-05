@@ -68,6 +68,11 @@ export default function CourseDetail() {
                   className="space-y-4"
                 >
                   <div className="flex flex-wrap items-center gap-3">
+                    {course.guaranteeText && (
+                      <Badge className="bg-yellow-400 text-slate-900 border-none hover:bg-yellow-500 font-bold px-3 py-1 text-sm rounded-md uppercase tracking-wider">
+                        {course.guaranteeText}
+                      </Badge>
+                    )}
                     <Badge className="bg-primary/20 text-primary border-primary/30 hover:bg-primary/30">
                       {course.level} Level
                     </Badge>
@@ -85,9 +90,20 @@ export default function CourseDetail() {
                     {course.title} <span className="text-primary">Mastery</span>
                   </h1>
                   
-                  <p className="text-xl text-slate-300 max-w-2xl leading-relaxed">
-                    {course.description} Designed for both students and working professionals looking for a career transition.
-                  </p>
+                  {course.bullets ? (
+                    <ul className="space-y-3 mt-6 text-slate-300 text-lg max-w-3xl">
+                      {course.bullets.map((bullet, idx) => (
+                        <li key={idx} className="flex gap-3 items-start">
+                          <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-xl text-slate-300 max-w-2xl leading-relaxed">
+                      {course.description} Designed for both students and working professionals looking for a career transition.
+                    </p>
+                  )}
 
                   <div className="flex flex-wrap gap-6 pt-4">
                     <div className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
@@ -106,6 +122,22 @@ export default function CourseDetail() {
                     </div>
                   </div>
                 </motion.div>
+                
+                {course.stats && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-8 border-t border-white/10"
+                  >
+                    {course.stats.map((stat, index) => (
+                      <div key={index} className="text-center p-4 rounded-xl bg-white/5 border border-white/10">
+                        <div className="text-2xl font-bold text-primary mb-1">{stat.value}</div>
+                        <div className="text-xs text-slate-400 font-medium tracking-wide uppercase">{stat.label}</div>
+                      </div>
+                    ))}
+                  </motion.div>
+                )}
               </div>
 
               <motion.div 
@@ -114,18 +146,35 @@ export default function CourseDetail() {
                 className="lg:col-span-1"
               >
                 <div className="bg-white rounded-3xl p-8 shadow-2xl border border-white/20 text-slate-900">
-                  <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                    <Zap className="text-primary h-6 w-6 fill-primary" />
-                    Enroll Now
+                  <h3 className="text-2xl font-bold flex items-center gap-2 mb-2">
+                    {course.targetRole ? `WANT IT JOB` : `Enroll Now`}
                   </h3>
+                  {course.targetRole && (
+                    <p className="text-slate-600 mb-6 font-medium">Become a {course.targetRole} in {course.duration}</p>
+                  )}
 
-                  <div className="mb-8 p-6 rounded-2xl bg-purple-50 border border-purple-100">
-                    <p className="text-xs text-purple-600 uppercase tracking-wider font-bold mb-2">Special Offer</p>
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-4xl font-bold text-primary">₹{course.discountedPrice.toLocaleString()}</span>
-                      <span className="text-lg line-through text-slate-400 font-medium">₹{course.originalPrice.toLocaleString()}</span>
+                  {course.targetRole && (
+                    <div className="mb-6 border border-slate-200 rounded-2xl overflow-hidden">
+                      <div className="bg-slate-50 px-4 py-3 border-b border-slate-200">
+                        <span className="font-bold text-slate-800">Freshers Salary</span>
+                      </div>
+                      <div className="p-4 flex items-center justify-between gap-4 bg-white">
+                        <div className="bg-slate-800 text-white px-4 py-2 rounded-lg font-bold">3 LPA</div>
+                        <span className="font-medium text-slate-400 uppercase text-sm">To</span>
+                        <div className="bg-slate-800 text-white px-4 py-2 rounded-lg font-bold">8 LPA</div>
+                      </div>
                     </div>
-                    <p className="text-sm text-primary font-semibold mt-2">{Math.round((1 - course.discountedPrice / course.originalPrice) * 100)}% OFF</p>
+                  )}
+
+                  <div className="mb-8 p-6 rounded-2xl bg-slate-900 text-white border border-slate-800 relative overflow-hidden">
+                    <div className="absolute -right-4 -top-4 opacity-10">
+                      <Star className="w-24 h-24" />
+                    </div>
+                    <p className="text-xs text-slate-300 uppercase tracking-wider font-bold mb-2">Quality Training With Affordable Fees!</p>
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-4xl font-bold text-yellow-400">₹{course.discountedPrice.toLocaleString()}</span>
+                      <span className="text-lg line-through text-slate-500 font-medium">₹{course.originalPrice.toLocaleString()}</span>
+                    </div>
                   </div>
                   
                   <div className="space-y-4 mb-8">
@@ -154,7 +203,7 @@ export default function CourseDetail() {
                     </div>
                   </div>
                   
-                  <Button size="lg" className="w-full bg-primary hover:bg-primary/90 h-14 text-lg font-bold rounded-2xl shadow-lg shadow-primary/20">
+                  <Button size="lg" className="w-full bg-[#f27405] hover:bg-[#d96604] h-14 text-lg font-bold rounded-2xl shadow-lg shadow-[#f27405]/20">
                     Book Free Demo
                   </Button>
                   <p className="text-center text-xs text-slate-400 mt-4">
