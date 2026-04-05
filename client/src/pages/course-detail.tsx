@@ -119,13 +119,13 @@ export default function CourseDetail() {
                     Enroll Now
                   </h3>
 
-                  <div className="mb-8 p-6 rounded-2xl bg-primary/5 border border-primary/20">
-                    <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold mb-2">Special Offer</p>
+                  <div className="mb-8 p-6 rounded-2xl bg-purple-50 border border-purple-100">
+                    <p className="text-xs text-purple-600 uppercase tracking-wider font-bold mb-2">Special Offer</p>
                     <div className="flex items-baseline gap-2">
                       <span className="text-4xl font-bold text-primary">₹{course.discountedPrice.toLocaleString()}</span>
-                      <span className="text-lg line-through text-slate-400">₹{course.originalPrice.toLocaleString()}</span>
+                      <span className="text-lg line-through text-slate-400 font-medium">₹{course.originalPrice.toLocaleString()}</span>
                     </div>
-                    <p className="text-xs text-primary font-semibold mt-2">{Math.round((1 - course.discountedPrice / course.originalPrice) * 100)}% OFF</p>
+                    <p className="text-sm text-primary font-semibold mt-2">{Math.round((1 - course.discountedPrice / course.originalPrice) * 100)}% OFF</p>
                   </div>
                   
                   <div className="space-y-4 mb-8">
@@ -177,13 +177,13 @@ export default function CourseDetail() {
               {course.tools.map((tool) => (
                 <motion.div 
                   key={tool.name}
-                  whileHover={{ scale: 1.1 }}
-                  className="flex flex-col items-center gap-3"
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className="flex flex-col items-center gap-4"
                 >
-                  <div className="h-20 w-20 rounded-2xl bg-slate-50 border border-slate-100 p-4 flex items-center justify-center shadow-sm">
-                    <img src={tool.icon} alt={tool.name} className="h-full w-full object-contain" />
+                  <div className="h-24 w-24 rounded-[1.5rem] bg-white border border-slate-100 p-5 flex items-center justify-center shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+                    <img src={tool.icon} alt={tool.name} className="h-full w-full object-contain drop-shadow-sm" />
                   </div>
-                  <span className="text-sm font-bold text-slate-600">{tool.name}</span>
+                  <span className="text-base font-bold text-slate-700">{tool.name}</span>
                 </motion.div>
               ))}
             </div>

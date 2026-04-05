@@ -56,7 +56,7 @@ const commonSlots: TimeSlot[] = [
 export const courses: Course[] = [
   {
     id: "1",
-    title: "Data Analytics",
+    title: "Data Analytics with AI",
     slug: "data-analytics",
     description: "Master the art of analyzing raw data to find trends and answer questions. Learn SQL, PowerBI, and Tableau.",
     icon: BarChart3,
@@ -73,8 +73,8 @@ export const courses: Course[] = [
     ],
     color: "bg-blue-500",
     salaryRange: "4 LPA - 12 LPA",
-    originalPrice: 25000,
-    discountedPrice: 15000,
+    originalPrice: 35000,
+    discountedPrice: 19999,
     features: ["100% Placement Guarantee", "NASSCOM Certified", "Hands-on Projects"],
     journey: [
       { 
@@ -128,7 +128,7 @@ export const courses: Course[] = [
     color: "bg-purple-600",
     salaryRange: "6 LPA - 25 LPA",
     originalPrice: 35000,
-    discountedPrice: 22000,
+    discountedPrice: 19999,
     features: ["Generative AI Focus", "GPU Lab Access", "MNC Partnerships"],
     journey: [
       { 
@@ -181,8 +181,8 @@ export const courses: Course[] = [
     ],
     color: "bg-orange-500",
     salaryRange: "5 LPA - 15 LPA",
-    originalPrice: 28000,
-    discountedPrice: 17000,
+    originalPrice: 35000,
+    discountedPrice: 19999,
     features: ["Microservices Focus", "Cloud Deployment", "Mock Interviews"],
     journey: [
       { 
@@ -235,8 +235,8 @@ export const courses: Course[] = [
     ],
     color: "bg-yellow-500",
     salaryRange: "4.5 LPA - 14 LPA",
-    originalPrice: 26000,
-    discountedPrice: 16000,
+    originalPrice: 35000,
+    discountedPrice: 19999,
     features: ["Startup Ready", "API Mastery", "Portfolio Building"],
     journey: [
       { 
@@ -289,8 +289,8 @@ export const courses: Course[] = [
     ],
     color: "bg-indigo-500",
     salaryRange: "5 LPA - 18 LPA",
-    originalPrice: 27000,
-    discountedPrice: 16500,
+    originalPrice: 35000,
+    discountedPrice: 19999,
     features: ["Certification Prep", "Lab Credits", "DevOps Integration"],
     journey: [
       { 
@@ -343,8 +343,8 @@ export const courses: Course[] = [
     ],
     color: "bg-green-500",
     salaryRange: "3.5 LPA - 10 LPA",
-    originalPrice: 20000,
-    discountedPrice: 12000,
+    originalPrice: 35000,
+    discountedPrice: 19999,
     features: ["Mobile Testing", "API Automation", "Bug Tracking"],
     journey: [
       { 
@@ -395,8 +395,8 @@ export const courses: Course[] = [
     ],
     color: "bg-blue-700",
     salaryRange: "5 LPA - 12 LPA",
-    originalPrice: 32000,
-    discountedPrice: 19000,
+    originalPrice: 45000,
+    discountedPrice: 24999,
     features: ["Real MNC Data", "S/4HANA Ready", "ERP Experts"],
     journey: [
       { 
@@ -447,8 +447,8 @@ export const courses: Course[] = [
     ],
     color: "bg-cyan-600",
     salaryRange: "4.5 LPA - 11 LPA",
-    originalPrice: 30000,
-    discountedPrice: 18000,
+    originalPrice: 45000,
+    discountedPrice: 24999,
     features: ["Supply Chain Focus", "MNC Case Studies", "Inventory Lab"],
     journey: [
       { 
@@ -499,8 +499,8 @@ export const courses: Course[] = [
     ],
     color: "bg-blue-400",
     salaryRange: "5 LPA - 20 LPA",
-    originalPrice: 29000,
-    discountedPrice: 18000,
+    originalPrice: 45000,
+    discountedPrice: 24999,
     features: ["Certification Vouchers", "AppExchange Lab", "Trailhead Focus"],
     journey: [
       { 
@@ -551,8 +551,8 @@ export const courses: Course[] = [
     ],
     color: "bg-rose-500",
     salaryRange: "5 LPA - 15 LPA",
-    originalPrice: 28000,
-    discountedPrice: 17000,
+    originalPrice: 45000,
+    discountedPrice: 24999,
     features: ["CSA Prep", "Scripting Lab", "Workflow Design"],
     journey: [
       { 
