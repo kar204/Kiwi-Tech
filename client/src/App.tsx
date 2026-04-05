@@ -9,6 +9,7 @@ import CourseDetail from "@/pages/course-detail";
 import CoursesList from "@/pages/courses";
 import About from "@/pages/about";
 import Contact from "@/pages/contact";
+import Bootcamp from "@/pages/bootcamp";
 
 function Router() {
   return (
@@ -18,6 +19,7 @@ function Router() {
       <Route path="/courses" component={CoursesList} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route path="/bootcamp" component={Bootcamp} />
       <Route component={NotFound} />
     </Switch>
   );
