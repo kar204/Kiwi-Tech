@@ -21,7 +21,8 @@ import {
   Globe,
   Rocket,
   Info,
-  X
+  X,
+  BookOpen
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
