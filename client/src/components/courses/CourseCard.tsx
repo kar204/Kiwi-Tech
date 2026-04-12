@@ -34,7 +34,7 @@ export function CourseCard({ course }: CourseCardProps) {
           >
             <Icon className="h-6 w-6 text-white" />
           </motion.div>
-          <Badge className="bg-[#f27405] hover:bg-[#d96604] text-white border-none font-semibold px-3 py-1 rounded-full text-xs cursor-default shadow-sm">
+          <Badge className="bg-[#8bc34a] hover:bg-[#7cb342] text-white border-none font-semibold px-3 py-1 rounded-full text-xs cursor-default shadow-sm">
             {course.level}
           </Badge>
         </div>
@@ -65,12 +65,12 @@ export function CourseCard({ course }: CourseCardProps) {
 
           <div className="space-y-4 pt-4 border-t border-slate-100">
             <div className="flex items-baseline gap-2">
-              <span className="text-[1.75rem] font-bold text-[#8b3dff]">₹{course.discountedPrice.toLocaleString()}</span>
+              <span className="text-[1.75rem] font-bold text-[#8bc34a]">₹{course.discountedPrice.toLocaleString()}</span>
               <span className="text-sm font-medium line-through text-slate-400">₹{course.originalPrice.toLocaleString()}</span>
             </div>
             <div className="flex flex-wrap gap-2">
               {course.tags.slice(0, 2).map((tag) => (
-                <span key={tag} className="inline-flex items-center rounded-full bg-[#fff4eb] px-3 py-1 text-[11px] font-semibold text-[#f27405]">
+                <span key={tag} className="inline-flex items-center rounded-full bg-[#f1f8e9] px-3 py-1 text-[11px] font-semibold text-[#689f38]">
                   {tag}
                 </span>
               ))}

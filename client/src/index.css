@@ -43,11 +43,11 @@
   --background: 0 0% 100%;
   --foreground: 222 47% 11%;
 
-  /* Modern Purple Primary (GenZ Tech vibe) */
-  --primary: 262 83% 58%;
+  /* Kiwi Green Primary */
+  --primary: 84 52% 53%; /* #8bc34a */
   --primary-foreground: 0 0% 100%;
 
-  /* Vibrant Orange Secondary (Energy/Action) */
+  /* Bright Orange Secondary (Energy/Action) */
   --secondary: 25 95% 53%;
   --secondary-foreground: 0 0% 100%;
 
@@ -64,7 +64,7 @@
 
   --border: 214.3 31.8% 91.4%;
   --input: 214.3 31.8% 91.4%;
-  --ring: 262 83% 58%;
+  --ring: 84 52% 53%;
 
   --card: 0 0% 100%;
   --card-foreground: 222 47% 11%;
@@ -90,7 +90,7 @@
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
   }
   .bg-gradient-brand {
-    @apply bg-gradient-to-r from-primary via-purple-500 to-secondary;
+    @apply bg-gradient-to-r from-[#8bc34a] via-[#aed581] to-[#689f38];
   }
   .glass-card {
     @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;

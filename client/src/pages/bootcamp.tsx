@@ -53,7 +53,7 @@ export default function Bootcamp() {
               transition={{ delay: 0.1 }}
               className="text-4xl md:text-6xl font-bold font-heading mb-6 leading-tight"
             >
-              Experience The Future of Learning with <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-primary">SkillNex Bootcamps</span>
+              Experience The Future of Learning with <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-[#8bc34a]">KiwiTech Bootcamps</span>
             </motion.h1>
             
             <motion.p 
@@ -102,8 +102,8 @@ export default function Bootcamp() {
                 transition={{ delay: 0.1 }}
                 className="text-center p-6"
               >
-                <div className="w-16 h-16 mx-auto bg-[#f27405]/10 rounded-2xl flex items-center justify-center mb-4">
-                  <CalendarClock className="h-8 w-8 text-[#f27405]" />
+                <div className="w-16 h-16 mx-auto bg-[#8bc34a]/10 rounded-2xl flex items-center justify-center mb-4">
+                  <CalendarClock className="h-8 w-8 text-[#8bc34a]" />
                 </div>
                 <h3 className="text-xl font-bold font-heading mb-2">Flexible Timing</h3>
                 <p className="text-slate-600">Choose from daily 1-hour slots available from 10 AM to 9 PM IST all week.</p>
@@ -204,7 +204,7 @@ export default function Bootcamp() {
                       
                       <Button 
                         disabled={!selectedCourse || !selectedSlot}
-                        className="w-full h-12 text-base font-bold bg-[#f27405] hover:bg-[#d96604] shadow-lg shadow-[#f27405]/20 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full h-12 text-base font-bold bg-[#8bc34a] hover:bg-[#7cb342] shadow-lg shadow-[#8bc34a]/20 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {!selectedCourse ? "Select Course" : !selectedSlot ? "Select Time Slot" : "Proceed to Payment"}
                       </Button>

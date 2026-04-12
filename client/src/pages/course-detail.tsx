@@ -80,10 +80,10 @@ export default function CourseDetail() {
                         {course.guaranteeText}
                       </Badge>
                     )}
-                    <Badge className="bg-primary/20 text-primary border-primary/30 hover:bg-primary/30">
+                    <Badge className="bg-[#8bc34a]/20 text-[#8bc34a] border-[#8bc34a]/30 hover:bg-[#8bc34a]/30">
                       {course.level} Level
                     </Badge>
-                    <Badge variant="outline" className="border-green-500/50 text-green-400">
+                    <Badge variant="outline" className="border-[#8bc34a]/50 text-[#8bc34a]">
                       Online Live Classes
                     </Badge>
                     <div className="flex items-center gap-1 text-yellow-400 font-bold">
@@ -94,14 +94,14 @@ export default function CourseDetail() {
                   </div>
 
                   <h1 className="font-heading text-4xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
-                    {course.title} <span className="text-primary">Mastery</span>
+                    {course.title} <span className="text-[#8bc34a]">Mastery</span>
                   </h1>
                   
                   {course.bullets ? (
                     <ul className="space-y-3 mt-6 text-slate-300 text-lg max-w-3xl">
                       {course.bullets.map((bullet, idx) => (
                         <li key={idx} className="flex gap-3 items-start">
-                          <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                          <CheckCircle2 className="h-5 w-5 text-[#8bc34a] shrink-0 mt-0.5" />
                           <span>{bullet}</span>
                         </li>
                       ))}
@@ -114,14 +114,14 @@ export default function CourseDetail() {
 
                   <div className="flex flex-wrap gap-6 pt-4">
                     <div className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
-                      <Clock className="h-6 w-6 text-primary" />
+                      <Clock className="h-6 w-6 text-[#8bc34a]" />
                       <div>
                         <p className="text-xs text-slate-400">Duration</p>
                         <p className="font-bold text-white">{course.duration}</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
-                      <Target className="h-6 w-6 text-primary" />
+                      <Target className="h-6 w-6 text-[#8bc34a]" />
                       <div>
                         <p className="text-xs text-slate-400">Salary Range</p>
                         <p className="font-bold text-white">{course.salaryRange}</p>
@@ -139,7 +139,7 @@ export default function CourseDetail() {
                   >
                     {course.stats.map((stat, index) => (
                       <div key={index} className="text-center p-4 rounded-xl bg-white/5 border border-white/10">
-                        <div className="text-2xl font-bold text-primary mb-1">{stat.value}</div>
+                        <div className="text-2xl font-bold text-[#8bc34a] mb-1">{stat.value}</div>
                         <div className="text-xs text-slate-400 font-medium tracking-wide uppercase">{stat.label}</div>
                       </div>
                     ))}
@@ -199,7 +199,7 @@ export default function CourseDetail() {
                       </p>
                       <div className="grid grid-cols-1 gap-2">
                         {course.slots.map((slot, i) => (
-                          <div key={i} className="flex items-center justify-between p-3 rounded-xl border border-slate-100 bg-white hover:border-primary/30 transition-colors">
+                          <div key={i} className="flex items-center justify-between p-3 rounded-xl border border-slate-100 bg-white hover:border-[#8bc34a]/30 transition-colors">
                             <span className="text-sm font-medium">{slot.time}</span>
                             <Badge variant={slot.availability === 'Full' ? 'destructive' : 'outline'} className="text-[10px]">
                               {slot.availability}
@@ -210,7 +210,7 @@ export default function CourseDetail() {
                     </div>
                   </div>
                   
-                  <Button size="lg" className="w-full bg-[#f27405] hover:bg-[#d96604] h-14 text-lg font-bold rounded-2xl shadow-lg shadow-[#f27405]/20">
+                  <Button size="lg" className="w-full bg-[#8bc34a] hover:bg-[#7cb342] h-14 text-lg font-bold rounded-2xl shadow-lg shadow-[#8bc34a]/20">
                     Book Free Demo
                   </Button>
                   <p className="text-center text-xs text-slate-400 mt-4">

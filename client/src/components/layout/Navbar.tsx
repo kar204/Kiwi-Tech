@@ -26,7 +26,7 @@ export function Navbar() {
                 <Rocket className="h-6 w-6" />
               </div>
               <span className="font-heading text-2xl font-bold tracking-tight text-foreground">
-                Skill<span className="text-primary">Nex</span>
+                Kiwi<span className="text-[#8bc34a]">Tech</span>
               </span>
             </a>
           </Link>
@@ -42,7 +42,7 @@ export function Navbar() {
                 {link.name}
               </a>
             ))}
-            <Button className="bg-primary hover:bg-primary/90">
+            <Button className="bg-[#8bc34a] hover:bg-[#7cb342] text-white">
               Get Started
             </Button>
           </div>
@@ -77,7 +77,7 @@ export function Navbar() {
                   {link.name}
                 </a>
               ))}
-              <Button className="w-full bg-primary" onClick={() => setIsOpen(false)}>
+              <Button className="w-full bg-[#8bc34a] hover:bg-[#7cb342] text-white" onClick={() => setIsOpen(false)}>
                 Get Started
               </Button>
             </div>

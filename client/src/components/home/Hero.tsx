@@ -15,12 +15,12 @@ export function Hero() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           <div className="flex flex-col justify-center space-y-8">
             <div className="space-y-4">
-              <Badge variant="outline" className="w-fit rounded-full border-primary/20 bg-primary/5 px-4 py-1 text-primary">
-                🚀 SkillNex - India's #1 Trusted EdTech
+              <Badge variant="outline" className="w-fit rounded-full border-[#8bc34a]/30 bg-[#8bc34a]/10 px-4 py-1 text-[#8bc34a] font-medium">
+                🚀 KiwiTech - India's #1 Trusted EdTech
               </Badge>
               <h1 className="font-heading text-4xl font-extrabold tracking-tight sm:text-5xl xl:text-6xl text-foreground">
                 Master Tech Skills, <br />
-                <span className="text-gradient">Get Placed in Top MNCs.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8bc34a] to-[#aed581]">Get Placed in Top MNCs.</span>
               </h1>
               <p className="max-w-[600px] text-lg text-muted-foreground md:text-xl">
                 Learn from expert instructors. 10 industry-leading courses from ₹12,000. 
@@ -35,7 +35,7 @@ export function Hero() {
                   placeholder="Enter your email" 
                   className="h-12 rounded-xl border-slate-200 bg-white shadow-sm pr-32"
                 />
-                <Button className="absolute right-1 top-1 h-10 rounded-lg bg-primary hover:bg-primary/90 px-6">
+                <Button className="absolute right-1 top-1 h-10 rounded-lg bg-[#8bc34a] hover:bg-[#7cb342] px-6 text-white font-bold">
                   Join Now
                 </Button>
               </div>
