@@ -7,18 +7,18 @@ import student4 from "@/assets/images/student-4.jpg";
 
 export function PlacementsSection() {
   const companies = [
-    { name: "Google", logo: "G", bg: "bg-blue-500" },
-    { name: "Amazon", logo: "A", bg: "bg-orange-500" },
-    { name: "Microsoft", logo: "M", bg: "bg-green-500" },
-    { name: "Apple", logo: "Ap", bg: "bg-gray-700" },
-    { name: "Meta", logo: "F", bg: "bg-blue-600" },
-    { name: "TCS", logo: "T", bg: "bg-cyan-600" },
-    { name: "Infosys", logo: "I", bg: "bg-blue-700" },
-    { name: "Wipro", logo: "W", bg: "bg-purple-600" },
-    { name: "HCL", logo: "H", bg: "bg-indigo-600" },
-    { name: "IBM", logo: "IB", bg: "bg-blue-800" },
-    { name: "Deloitte", logo: "D", bg: "bg-red-600" },
-    { name: "Accenture", logo: "Ac", bg: "bg-purple-700" },
+    { name: "Google", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg", bg: "bg-blue-500" },
+    { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg", bg: "bg-orange-500" },
+    { name: "Microsoft", logo: "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg", bg: "bg-green-500" },
+    { name: "Apple", logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg", bg: "bg-gray-800" },
+    { name: "Meta", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg", bg: "bg-blue-600" },
+    { name: "TCS", logo: "https://upload.wikimedia.org/wikipedia/commons/b/b1/TATA_Consultancy_Services_Logo.svg", bg: "bg-cyan-600" },
+    { name: "Infosys", logo: "https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg", bg: "bg-blue-700" },
+    { name: "Wipro", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg", bg: "bg-purple-600" },
+    { name: "HCL", logo: "https://upload.wikimedia.org/wikipedia/commons/4/47/HCL_Technologies_logo.svg", bg: "bg-indigo-600" },
+    { name: "IBM", logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg", bg: "bg-blue-800" },
+    { name: "Deloitte", logo: "https://upload.wikimedia.org/wikipedia/commons/5/56/Deloitte.svg", bg: "bg-red-600" },
+    { name: "Accenture", logo: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg", bg: "bg-purple-700" },
   ];
 
   const successStories = [
@@ -141,15 +141,14 @@ export function PlacementsSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                whileHover={{ scale: 1.1 }}
-                className={`${company.bg} rounded-2xl aspect-square flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow cursor-pointer group`}
+                whileHover={{ scale: 1.05 }}
+                className={`${company.bg} rounded-2xl aspect-video flex items-center justify-center shadow-md hover:shadow-xl transition-all cursor-pointer group p-4`}
               >
-                <div className="text-center">
-                  <p className="text-white font-bold text-2xl">{company.logo}</p>
-                  <p className="text-white text-xs font-semibold mt-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                    {company.name}
-                  </p>
-                </div>
+                <img
+                  src={company.logo}
+                  alt={company.name}
+                  className="max-h-8 md:max-h-10 max-w-full object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity"
+                />
               </motion.div>
             ))}
           </div>
