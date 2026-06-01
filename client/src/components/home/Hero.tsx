@@ -23,8 +23,8 @@ export function Hero() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8bc34a] to-[#aed581]">Get Placed in Top MNCs.</span>
               </h1>
               <p className="max-w-[600px] text-lg text-muted-foreground md:text-xl">
-                Learn from expert instructors. 10 industry-leading courses from ₹12,000. 
-                100% placement guarantee, lifetime access, and real-world projects.
+                Learn from expert instructors. 10 industry-leading courses from ₹19,999. 
+                100% placement guarantee, hands-on training, and real-time projects.
               </p>
             </div>
 
@@ -44,10 +44,10 @@ export function Hero() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 text-sm font-medium text-slate-600">
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 text-sm font-medium text-slate-600">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-green-500" />
-                <span>Lifetime Access</span>
+                <span>Hands-on Training</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-green-500" />
@@ -56,6 +56,10 @@ export function Hero() {
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-green-500" />
                 <span>Job Guarantee</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-green-500" />
+                <span>Real-time Projects</span>
               </div>
             </div>
           </div>
@@ -99,28 +103,24 @@ export function Hero() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-100 bg-white">
             <div className="p-6 text-center hover:bg-slate-50 transition-colors">
-              <div className="text-xl font-bold text-slate-800 mb-2">100+ <span className="text-sm font-medium text-slate-500">(Enrolled)</span></div>
               <div className="text-sm font-bold text-slate-700 mb-2 flex items-center justify-center gap-2">
                 <Users className="w-5 h-5 text-[#8bc34a]" /> Freshers To IT
               </div>
               <p className="text-xs text-slate-500 font-medium">Entry level IT candidate</p>
             </div>
             <div className="p-6 text-center hover:bg-slate-50 transition-colors">
-              <div className="text-xl font-bold text-slate-800 mb-2">50+ <span className="text-sm font-medium text-slate-500">(Enrolled)</span></div>
               <div className="text-sm font-bold text-slate-700 mb-2 flex items-center justify-center gap-2">
                 <Briefcase className="w-5 h-5 text-[#8bc34a]" /> NON-IT To IT
               </div>
               <p className="text-xs text-slate-500 font-medium">IT career switch</p>
             </div>
             <div className="p-6 text-center hover:bg-slate-50 transition-colors">
-              <div className="text-xl font-bold text-slate-800 mb-2">75+ <span className="text-sm font-medium text-slate-500">(Enrolled)</span></div>
               <div className="text-sm font-bold text-slate-700 mb-2 flex items-center justify-center gap-2">
                 <GraduationCap className="w-5 h-5 text-[#8bc34a]" /> Career Gap
               </div>
               <p className="text-xs text-slate-500 font-medium">Career restart</p>
             </div>
             <div className="p-6 text-center hover:bg-slate-50 transition-colors">
-              <div className="text-xl font-bold text-slate-800 mb-2">30+ <span className="text-sm font-medium text-slate-500">(Enrolled)</span></div>
               <div className="text-sm font-bold text-slate-700 mb-2 flex items-center justify-center gap-2">
                 <TrendingUp className="w-5 h-5 text-[#8bc34a]" /> Less Than 60%
               </div>
