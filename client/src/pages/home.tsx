@@ -104,7 +104,7 @@ export default function Home() {
               Ready to Kickstart Your Career?
             </h2>
             <p className="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
-              Join thousands of students who have transformed their careers with GuruCool. Get mentorship, hands-on projects, and placement support.
+              Join thousands of students who have transformed their careers with KiwiTech. Get mentorship, hands-on projects, and placement support.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90 px-8 text-lg h-12">

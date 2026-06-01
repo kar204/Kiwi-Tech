@@ -73,8 +73,8 @@ export function Hero() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               
-              {/* Floating Cards */}
-              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur shadow-lg p-4 rounded-xl border border-white/20">
+              {/* Floating Cards - Removed per user request */}
+              {/* <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur shadow-lg p-4 rounded-xl border border-white/20">
                 <div className="flex items-center gap-4">
                   <div className="flex -space-x-3">
                     {[1,2,3,4].map(i => (
@@ -88,7 +88,7 @@ export function Hero() {
                     <p className="text-xs text-slate-500">Already learning with us</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
