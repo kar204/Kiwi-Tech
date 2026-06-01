@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import student1 from "@assets/images/student-1.jpg";
-import student2 from "@assets/images/student-2.jpg";
-import student3 from "@assets/images/student-3.jpg";
-import student4 from "@assets/images/student-4.jpg";
+import student1 from "@/assets/images/student-1.jpg";
+import student2 from "@/assets/images/student-2.jpg";
+import student3 from "@/assets/images/student-3.jpg";
+import student4 from "@/assets/images/student-4.jpg";
 
 export function PlacementsSection() {
   const companies = [
