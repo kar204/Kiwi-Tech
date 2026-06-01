@@ -19,32 +19,32 @@ export function PlacementMarquee() {
           Our Hiring Partners
         </p>
       </div>
-      <div className="relative flex w-full overflow-hidden items-center h-16">
+      <div className="relative flex w-full overflow-hidden items-center h-20">
         <motion.div
-          className="flex min-w-full shrink-0 items-center justify-around gap-16 px-8"
+          className="flex min-w-full shrink-0 items-center justify-center gap-16 md:gap-24 px-8"
           animate={{ x: "-100%" }}
           transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
         >
           {[...companies, ...companies].map((company, index) => (
             <div
               key={`${company.name}-${index}`}
-              className="flex items-center justify-center h-12 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 min-w-[120px]"
+              className="flex items-center justify-center h-16 w-32 md:w-40 transition-all duration-300 shrink-0"
             >
-              <img src={company.logo} alt={company.name} className="max-h-8 max-w-[120px] object-contain" />
+              <img src={company.logo} alt={company.name} className="max-h-10 max-w-full object-contain" />
             </div>
           ))}
         </motion.div>
         <motion.div
-          className="flex min-w-full shrink-0 items-center justify-around gap-16 px-8 absolute top-0 left-full h-full"
+          className="flex min-w-full shrink-0 items-center justify-center gap-16 md:gap-24 px-8 absolute top-0 left-full h-full"
           animate={{ x: "-100%" }}
           transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
         >
            {[...companies, ...companies].map((company, index) => (
             <div
               key={`${company.name}-duplicate-${index}`}
-              className="flex items-center justify-center h-12 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 min-w-[120px]"
+              className="flex items-center justify-center h-16 w-32 md:w-40 transition-all duration-300 shrink-0"
             >
-              <img src={company.logo} alt={company.name} className="max-h-8 max-w-[120px] object-contain" />
+              <img src={company.logo} alt={company.name} className="max-h-10 max-w-full object-contain" />
             </div>
           ))}
         </motion.div>
