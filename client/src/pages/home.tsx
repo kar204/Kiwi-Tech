@@ -19,8 +19,8 @@ export default function Home() {
         <PlacementMarquee />
         <PlacementsSection />
 
-        {/* Stats Section */}
-        <section className="py-20 bg-white">
+        {/* Stats Section - Removed per user request */}
+        {/* <section className="py-20 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div className="space-y-2">
@@ -53,7 +53,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Courses Section */}
         <section id="courses" className="py-20 bg-slate-50">

@@ -1,0 +1,26 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "xlmvdbn4g0mH90ZVqJggt"
+uri = "file://client/src/assets/images/student-1.jpg"
+type = "image"
+title = "professional indian man smiling looking at camera portrait headshot"
+
+[[outputs]]
+id = "v4J7jortjVjtl6ZPCkXXO"
+uri = "file://client/src/assets/images/student-2.jpg"
+type = "image"
+title = "professional indian woman smiling looking at camera portrait headshot"
+
+[[outputs]]
+id = "kWM-I0p2VcaXwJuIRNk6f"
+uri = "file://client/src/assets/images/student-3.jpg"
+type = "image"
+title = "young professional indian man smiling portrait"
+
+[[outputs]]
+id = "codA2cAeZDpNujUMHGi-6"
+uri = "file://client/src/assets/images/student-4.jpg"
+type = "image"
+title = "young professional indian woman smiling portrait headshot"

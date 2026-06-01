@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
-import { Users, TrendingUp, Award } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import student1 from "@assets/images/student-1.jpg";
+import student2 from "@assets/images/student-2.jpg";
+import student3 from "@assets/images/student-3.jpg";
+import student4 from "@assets/images/student-4.jpg";
 
 export function PlacementsSection() {
   const companies = [
@@ -23,40 +26,34 @@ export function PlacementsSection() {
       name: "Rahul Kumar",
       role: "Data Scientist",
       company: "Google",
-      salary: "₹18,00,000/yr",
+      salary: "₹10,00,000/yr",
       course: "Data Science with AI",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=rahul",
+      image: student1,
     },
     {
       name: "Priya Singh",
       role: "Full Stack Developer",
       company: "Amazon",
-      salary: "₹15,50,000/yr",
+      salary: "₹9,50,000/yr",
       course: "Java Full Stack",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=priya",
+      image: student2,
     },
     {
       name: "Akhil Patel",
       role: "Cloud Architect",
       company: "Microsoft",
-      salary: "₹17,00,000/yr",
+      salary: "₹8,50,000/yr",
       course: "AWS Cloud Computing",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=akhil",
+      image: student3,
     },
     {
       name: "Sneha Sharma",
       role: "QA Automation Engineer",
       company: "TCS",
-      salary: "₹12,50,000/yr",
+      salary: "₹8,00,000/yr",
       course: "Software Testing",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=sneha",
+      image: student4,
     },
-  ];
-
-  const stats = [
-    { icon: TrendingUp, label: "Average Salary", value: "₹15.5L", color: "text-green-600" },
-    { icon: Users, label: "Placement Rate", value: "95%", color: "text-blue-600" },
-    { icon: Award, label: "Top Company", value: "FAANG", color: "text-purple-600" },
   ];
 
   return (
@@ -67,40 +64,17 @@ export function PlacementsSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20 space-y-4"
+          className="text-center mb-16 space-y-4"
         >
           <Badge className="bg-green-100 text-green-700 border-none mx-auto">
             ✨ Our Success Stories
           </Badge>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900">
-            Your Success is Our <span className="text-primary">Mission</span>
+            Your Success is Our <span className="text-[#8bc34a]">Mission</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             Our students are placed in top global companies with exceptional packages and roles.
           </p>
-        </motion.div>
-
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-8 mb-20"
-        >
-          {stats.map((stat, i) => {
-            const Icon = stat.icon;
-            return (
-              <motion.div
-                key={i}
-                whileHover={{ scale: 1.05 }}
-                className="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm text-center"
-              >
-                <Icon className={`h-10 w-10 mx-auto mb-4 ${stat.color}`} />
-                <p className="text-slate-600 text-sm font-medium mb-2">{stat.label}</p>
-                <p className="font-heading text-3xl font-bold text-slate-900">{stat.value}</p>
-              </motion.div>
-            );
-          })}
         </motion.div>
 
         {/* Success Stories */}
@@ -130,7 +104,7 @@ export function PlacementsSection() {
                   <img
                     src={story.image}
                     alt={story.name}
-                    className="h-20 w-20 rounded-full border-4 border-white shadow-md mb-4"
+                    className="h-20 w-20 rounded-full border-4 border-white shadow-md mb-4 object-cover"
                   />
                   <h4 className="font-bold text-slate-900 mb-1">{story.name}</h4>
                   <p className="text-sm text-primary font-semibold">{story.role}</p>
