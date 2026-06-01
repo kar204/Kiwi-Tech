@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2, Users, Briefcase, GraduationCap, TrendingUp } from "lucide-react";
 import heroImage from "@assets/generated_images/indian_genz_students_learning_coding.png";
 
 export function Hero() {
@@ -12,7 +12,7 @@ export function Hero() {
       <div className="absolute bottom-0 left-0 -ml-20 -mb-20 h-[500px] w-[500px] rounded-full bg-secondary/5 blur-3xl" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center mb-16">
           <div className="flex flex-col justify-center space-y-8">
             <div className="space-y-4">
               <Badge variant="outline" className="w-fit rounded-full border-[#8bc34a]/30 bg-[#8bc34a]/10 px-4 py-1 text-[#8bc34a] font-medium">
@@ -85,6 +85,47 @@ export function Hero() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Stats and Placement Info Boxes */}
+        <div className="mt-8 rounded-2xl border border-slate-200 bg-white shadow-xl overflow-hidden">
+          <div className="bg-slate-50 px-6 py-4 border-b border-slate-200 text-center md:text-left flex flex-col sm:flex-row items-center justify-between">
+            <div className="text-lg">
+              <span className="font-extrabold text-slate-900 bg-white px-3 py-1 rounded-md shadow-sm border border-slate-200 mr-2">550+</span>
+              <span className="font-bold text-slate-800">Students Placed Every Month</span>
+            </div>
+            <span className="text-[#8bc34a] font-bold text-lg mt-2 sm:mt-0">Be The Next!</span>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-100 bg-white">
+            <div className="p-6 text-center hover:bg-slate-50 transition-colors">
+              <div className="text-xl font-bold text-slate-800 mb-2">11,080+ <span className="text-sm font-medium text-slate-500">(Placed)</span></div>
+              <div className="text-sm font-bold text-slate-700 mb-2 flex items-center justify-center gap-2">
+                <Users className="w-5 h-5 text-[#8bc34a]" /> Freshers To IT
+              </div>
+              <p className="text-xs text-slate-500 font-medium">Entry level IT candidate</p>
+            </div>
+            <div className="p-6 text-center hover:bg-slate-50 transition-colors">
+              <div className="text-xl font-bold text-slate-800 mb-2">5,545+ <span className="text-sm font-medium text-slate-500">(Placed)</span></div>
+              <div className="text-sm font-bold text-slate-700 mb-2 flex items-center justify-center gap-2">
+                <Briefcase className="w-5 h-5 text-[#8bc34a]" /> NON-IT To IT
+              </div>
+              <p className="text-xs text-slate-500 font-medium">IT career switch</p>
+            </div>
+            <div className="p-6 text-center hover:bg-slate-50 transition-colors">
+              <div className="text-xl font-bold text-slate-800 mb-2">7,955+ <span className="text-sm font-medium text-slate-500">(Placed)</span></div>
+              <div className="text-sm font-bold text-slate-700 mb-2 flex items-center justify-center gap-2">
+                <GraduationCap className="w-5 h-5 text-[#8bc34a]" /> Career Gap
+              </div>
+              <p className="text-xs text-slate-500 font-medium">Career restart</p>
+            </div>
+            <div className="p-6 text-center hover:bg-slate-50 transition-colors">
+              <div className="text-xl font-bold text-slate-800 mb-2">3,876+ <span className="text-sm font-medium text-slate-500">(Placed)</span></div>
+              <div className="text-sm font-bold text-slate-700 mb-2 flex items-center justify-center gap-2">
+                <TrendingUp className="w-5 h-5 text-[#8bc34a]" /> Less Than 60%
+              </div>
+              <p className="text-xs text-slate-500 font-medium">Non IT professional with Interview prep</p>
             </div>
           </div>
         </div>
