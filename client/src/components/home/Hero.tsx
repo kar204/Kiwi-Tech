@@ -80,8 +80,8 @@ export function Hero() {
                     ))}
                   </div>
                   <div>
-                    <p className="font-bold text-slate-900">10k+ Students</p>
-                    <p className="text-xs text-slate-500">Placed in top MNCs</p>
+                    <p className="font-bold text-slate-900">150+ Students</p>
+                    <p className="text-xs text-slate-500">Already learning with us</p>
                   </div>
                 </div>
               </div>
@@ -93,35 +93,34 @@ export function Hero() {
         <div className="mt-8 rounded-2xl border border-slate-200 bg-white shadow-xl overflow-hidden">
           <div className="bg-slate-50 px-6 py-4 border-b border-slate-200 text-center md:text-left flex flex-col sm:flex-row items-center justify-between">
             <div className="text-lg">
-              <span className="font-extrabold text-slate-900 bg-white px-3 py-1 rounded-md shadow-sm border border-slate-200 mr-2">550+</span>
-              <span className="font-bold text-slate-800">Students Placed Every Month</span>
+              <span className="font-bold text-slate-800">From Learning to Earning -</span>
             </div>
-            <span className="text-[#8bc34a] font-bold text-lg mt-2 sm:mt-0">Be The Next!</span>
+            <span className="text-[#8bc34a] font-bold text-lg mt-2 sm:mt-0">Your journey starts here!</span>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-100 bg-white">
             <div className="p-6 text-center hover:bg-slate-50 transition-colors">
-              <div className="text-xl font-bold text-slate-800 mb-2">11,080+ <span className="text-sm font-medium text-slate-500">(Placed)</span></div>
+              <div className="text-xl font-bold text-slate-800 mb-2">100+ <span className="text-sm font-medium text-slate-500">(Enrolled)</span></div>
               <div className="text-sm font-bold text-slate-700 mb-2 flex items-center justify-center gap-2">
                 <Users className="w-5 h-5 text-[#8bc34a]" /> Freshers To IT
               </div>
               <p className="text-xs text-slate-500 font-medium">Entry level IT candidate</p>
             </div>
             <div className="p-6 text-center hover:bg-slate-50 transition-colors">
-              <div className="text-xl font-bold text-slate-800 mb-2">5,545+ <span className="text-sm font-medium text-slate-500">(Placed)</span></div>
+              <div className="text-xl font-bold text-slate-800 mb-2">50+ <span className="text-sm font-medium text-slate-500">(Enrolled)</span></div>
               <div className="text-sm font-bold text-slate-700 mb-2 flex items-center justify-center gap-2">
                 <Briefcase className="w-5 h-5 text-[#8bc34a]" /> NON-IT To IT
               </div>
               <p className="text-xs text-slate-500 font-medium">IT career switch</p>
             </div>
             <div className="p-6 text-center hover:bg-slate-50 transition-colors">
-              <div className="text-xl font-bold text-slate-800 mb-2">7,955+ <span className="text-sm font-medium text-slate-500">(Placed)</span></div>
+              <div className="text-xl font-bold text-slate-800 mb-2">75+ <span className="text-sm font-medium text-slate-500">(Enrolled)</span></div>
               <div className="text-sm font-bold text-slate-700 mb-2 flex items-center justify-center gap-2">
                 <GraduationCap className="w-5 h-5 text-[#8bc34a]" /> Career Gap
               </div>
               <p className="text-xs text-slate-500 font-medium">Career restart</p>
             </div>
             <div className="p-6 text-center hover:bg-slate-50 transition-colors">
-              <div className="text-xl font-bold text-slate-800 mb-2">3,876+ <span className="text-sm font-medium text-slate-500">(Placed)</span></div>
+              <div className="text-xl font-bold text-slate-800 mb-2">30+ <span className="text-sm font-medium text-slate-500">(Enrolled)</span></div>
               <div className="text-sm font-bold text-slate-700 mb-2 flex items-center justify-center gap-2">
                 <TrendingUp className="w-5 h-5 text-[#8bc34a]" /> Less Than 60%
               </div>
