@@ -120,13 +120,15 @@ export default function CourseDetail() {
                         <p className="font-bold text-white">{course.duration}</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
-                      <Target className="h-6 w-6 text-[#8bc34a]" />
-                      <div>
-                        <p className="text-xs text-slate-400">Salary Range</p>
-                        <p className="font-bold text-white">{course.salaryRange}</p>
+                    {course.targetRole && (
+                      <div className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
+                        <Target className="h-6 w-6 text-[#8bc34a]" />
+                        <div>
+                          <p className="text-xs text-slate-400">Target Role</p>
+                          <p className="font-bold text-white">{course.targetRole}</p>
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                 </motion.div>
                 
@@ -195,7 +197,7 @@ export default function CourseDetail() {
 
                     <div className="space-y-3">
                       <p className="text-sm font-bold text-slate-700 flex items-center gap-2">
-                        <Timer className="h-4 w-4" /> Available Slots (IST)
+                        <Timer className="h-4 w-4" /> Available Batches
                       </p>
                       <div className="grid grid-cols-1 gap-2">
                         {course.slots.map((slot, i) => (
@@ -344,6 +346,75 @@ export default function CourseDetail() {
                     </Button>
                   </div>
                 </div>
+
+                {course.projects && course.projects.length > 0 && (
+                  <div className="space-y-8 pt-8">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm">
+                      <Target className="h-4 w-4" /> Practical Experience
+                    </div>
+                    <h2 className="font-heading text-4xl lg:text-5xl font-bold leading-tight">
+                      Hands-On <span className="text-primary">Projects</span>
+                    </h2>
+                    <div className="grid sm:grid-cols-2 gap-6">
+                      {course.projects.map((project, idx) => (
+                        <div key={idx} className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                          <h3 className="font-bold text-xl mb-3 text-slate-900">{project.title}</h3>
+                          <p className="text-slate-600 text-sm leading-relaxed">{project.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {course.whatsIncluded && course.whatsIncluded.length > 0 && (
+                  <div className="space-y-8 pt-8">
+                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm">
+                      <CheckCircle2 className="h-4 w-4" /> Added Value
+                    </div>
+                    <h2 className="font-heading text-4xl lg:text-5xl font-bold leading-tight">
+                      What's <span className="text-primary">Included</span>
+                    </h2>
+                    <div className="space-y-6">
+                      {course.whatsIncluded.map((item, idx) => (
+                        <div key={idx} className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
+                           <h3 className="font-bold text-xl mb-4 flex items-center gap-3">
+                             <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary shrink-0">
+                               <CheckCircle2 className="w-5 h-5" />
+                             </span>
+                             {item.feature}
+                           </h3>
+                           <ul className="space-y-2 pl-11">
+                             {item.details.map((detail, dIdx) => (
+                               <li key={dIdx} className="text-slate-600 text-sm flex items-start gap-2">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-primary/50 mt-1.5 shrink-0" />
+                                  {detail}
+                               </li>
+                             ))}
+                           </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {course.keySkills && course.keySkills.length > 0 && (
+                  <div className="space-y-8 pt-8">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm">
+                      <Zap className="h-4 w-4" /> Career Growth
+                    </div>
+                    <h2 className="font-heading text-4xl lg:text-5xl font-bold leading-tight">
+                      Key Skills You Will <span className="text-primary">Gain</span>
+                    </h2>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      {course.keySkills.map((skill, idx) => (
+                        <div key={idx} className="bg-slate-50 p-6 rounded-3xl border border-slate-100">
+                          <h3 className="font-bold text-lg mb-2 text-slate-900">{skill.skill}</h3>
+                          <p className="text-slate-600 text-sm">{skill.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div className="lg:col-span-5 xl:col-span-4">
@@ -380,6 +451,24 @@ export default function CourseDetail() {
                       </div>
                     </div>
                   </div>
+
+                  {course.targetAudience && course.targetAudience.length > 0 && (
+                    <div className="bg-white rounded-[2.5rem] p-8 border border-slate-200 shadow-xl shadow-slate-200/50">
+                      <h3 className="font-heading text-2xl font-bold mb-6 text-slate-900">
+                        Who is this <span className="text-primary">course for?</span>
+                      </h3>
+                      <ul className="space-y-3">
+                        {course.targetAudience.map((audience, i) => (
+                          <li key={i} className="flex items-center gap-3">
+                            <div className="bg-primary/10 rounded-full p-1.5 shrink-0">
+                              <Users className="h-4 w-4 text-primary" />
+                            </div>
+                            <span className="text-slate-700 font-medium">{audience}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                   
                   {/* Need Help Card */}
                   <div className="bg-primary/5 rounded-3xl p-8 border border-primary/10 text-center">

@@ -1,0 +1,396 @@
+{
+  "course": {
+    "title": "Data Science and AI Training in Chennai",
+    "provider": "ACTE Technologies",
+    "source_url": "https://www.acte.in/data-science-and-ai-training-in-chennai",
+    "tagline": "Join Our 100% Job Guaranteed Data Science and AI Training Institute in Chennai",
+    "fee": {
+      "original": 36000,
+      "discounted": 16500,
+      "currency": "INR"
+    },
+    "stats": {
+      "freshers_placed": 11645,
+      "non_it_placed": 5764,
+      "career_gap_placed": 7834,
+      "less_than_60_percent_placed": 4978,
+      "placed_per_month": 550,
+      "hiring_partners": 350
+    },
+    "overview": "The Data Science and AI Training in Chennai helps beginners build strong skills in AI, machine learning and data analytics through step-by-step learning. The course is designed for freshers to easily understand real-world concepts and tools. You will gain practical knowledge through live projects and internships that prepare you for industry needs.",
+    "learning_outcomes": [
+      "Gain expertise in Python, Machine Learning and Data Visualization from scratch",
+      "Learn to collect, clean and analyze data using popular tools and techniques",
+      "Work on hands-on projects and case studies applying AI and Data Science concepts",
+      "Understand predictive modeling, deep learning and data-driven decision-making",
+      "Develop programming and analytical skills for real industry challenges",
+      "Earn an industry-recognized certification supporting placement and career growth"
+    ],
+    "highlights": [
+      "All-in-one course covering Python, Machine Learning, Deep Learning and Data Visualization",
+      "Complete career assistance with placement opportunities from top companies",
+      "Community of over 11,000 learners trained and placed through 350+ hiring partners",
+      "Expert trainers with 10+ years of real-world experience in AI, Data Analytics and Automation",
+      "Beginner-friendly sessions, real-time projects and personalized career mentorship",
+      "Flexible batches, affordable course fees and 100% placement support"
+    ],
+    "batch_modes": [
+      { "type": "Weekdays", "time": "08:00 AM & 10:00 AM" },
+      { "type": "Weekends", "time": "10:00 AM - 01:30 PM" },
+      { "type": "Weekends", "time": "09:00 AM - 02:00 PM" }
+    ],
+    "tools_covered": [
+      "VS Code",
+      "Virtualenv",
+      "PyCharm",
+      "Pytest",
+      "Pylint",
+      "Anaconda",
+      "Jupyter Notebook",
+      "PIP"
+    ],
+    "popular_tools": [
+      {
+        "name": "Python",
+        "description": "One of the most popular tools used in AI and Data Science. Robust libraries like NumPy, Pandas and Scikit-learn make it simple to learn for data analysis and machine learning."
+      },
+      {
+        "name": "TensorFlow",
+        "description": "Google's powerful open-source framework for building and refining deep learning and machine learning models. Used for chatbots, recommendation systems and image classification."
+      },
+      {
+        "name": "R Programming",
+        "description": "A statistical programming language used for mapping, data analysis and forecasting. Especially useful for understanding data trends through charts and graphs."
+      },
+      {
+        "name": "Jupyter Notebook",
+        "description": "An interactive environment making it simple to write, execute and view code. Allows combining code, text and visuals in one place — perfect for students and professionals."
+      },
+      {
+        "name": "Power BI",
+        "description": "A data visualization solution that assists users in turning raw data into useful insights through interactive dashboards and reports. Great tool for presenting data visually."
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "TensorFlow",
+        "description": "Created by Google, makes it simple to create and train machine learning and deep learning models. Supports image recognition, natural language processing and predictive analytics."
+      },
+      {
+        "name": "PyTorch",
+        "description": "Developed by Facebook, popular for deep learning and AI research. Offers an easy-to-understand interface and dynamic computation with strong GPU acceleration support."
+      },
+      {
+        "name": "Scikit-learn",
+        "description": "Simple and easy-to-use framework for data science and machine learning tasks. Has tools for clustering, regression, classification and preprocessing data."
+      },
+      {
+        "name": "Keras",
+        "description": "A high-level neural network framework that makes deep learning straightforward. Runs on top of TensorFlow and allows building AI models with fewer lines of code."
+      },
+      {
+        "name": "Apache Spark",
+        "description": "A powerful framework for processing and analyzing large amounts of data. Can handle big datasets effectively and facilitates real-time data analytics and machine learning."
+      }
+    ],
+    "syllabus": [
+      {
+        "module": "Python for Data Science",
+        "topics": [
+          "Introduction to Python – Syntax, Variables, Data Types",
+          "Data Structures – Lists, Tuples, Dictionaries, Sets",
+          "Functions & Loops – Defining Functions, Control Flow",
+          "Libraries – NumPy, Pandas for data manipulation"
+        ]
+      },
+      {
+        "module": "R Programming Basics",
+        "topics": [
+          "Introduction to R – Syntax, Data Types, Operators",
+          "Data Frames and Vectors – Creating and Managing Data",
+          "Statistical Functions – Mean, Median, Standard Deviation",
+          "Data Handling – dplyr and tidyr packages"
+        ]
+      },
+      {
+        "module": "Data Visualization",
+        "topics": [
+          "Matplotlib & Seaborn – Charts, Graphs and Plots",
+          "Tableau Basics – Dashboards and Interactive Reports",
+          "Plotly – Interactive Visualizations for Web",
+          "Visual Storytelling – Representing Data Clearly"
+        ]
+      },
+      {
+        "module": "SQL & Database Management",
+        "topics": [
+          "Introduction to SQL – Queries, Joins and Functions",
+          "Data Extraction – SELECT, WHERE, GROUP BY",
+          "Database Management – MySQL/PostgreSQL basics",
+          "Integration – Connecting SQL with Python & R"
+        ]
+      },
+      {
+        "module": "Machine Learning Fundamentals",
+        "topics": [
+          "Supervised Learning – Regression, Classification",
+          "Unsupervised Learning – Clustering, Dimensionality Reduction",
+          "Model Evaluation – Accuracy, Precision, Recall",
+          "Tools – Scikit-learn and basic ML pipelines"
+        ]
+      },
+      {
+        "module": "Deep Learning & AI Frameworks",
+        "topics": [
+          "Neural Network Basics – Perceptron, Activation Functions",
+          "Frameworks – TensorFlow, Keras, PyTorch",
+          "Image & Text Processing – CNNs, RNNs, NLP Basics",
+          "Model Training & Optimization – Gradient Descent, Epochs"
+        ]
+      },
+      {
+        "module": "Data Preprocessing & Feature Engineering",
+        "topics": [
+          "Handling Missing Data – Imputation Techniques",
+          "Data Normalization & Scaling – StandardScaler, MinMaxScaler",
+          "Feature Selection – Correlation, PCA",
+          "Data Transformation – Encoding, Binning and Aggregation"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "title": "Crop Disease Detection",
+        "description": "Develop a plant disease detection system using Python, TensorFlow, and CNN models to analyze leaf images. Implement image classification and deep learning techniques."
+      },
+      {
+        "title": "Sales Forecasting Dashboard",
+        "description": "Develop an interactive Power BI dashboard powered by Python and ARIMA models. Analyze sales data trends and predict future sales for better business planning."
+      },
+      {
+        "title": "Voice Emotion Recognition",
+        "description": "Create an AI model using Python, Librosa and RNNs to detect emotions from speech. Process audio signals and classify emotions like happiness, anger or sadness."
+      },
+      {
+        "title": "Spam Email Classifier",
+        "description": "Build a spam detection system using Python, Scikit-learn and NLP techniques like TF-IDF. Train classification models to filter spam from genuine emails."
+      },
+      {
+        "title": "Stock Market Sentiment Analysis",
+        "description": "Combine Python, BeautifulSoup and NLP to scrape financial news and predict stock trends. Use sentiment scores and machine learning models for investment insights."
+      }
+    ],
+    "job_roles": [
+      "Data Scientist",
+      "Machine Learning Engineer",
+      "AI Engineer",
+      "Data Analyst",
+      "Business Intelligence (BI) Analyst",
+      "Deep Learning Specialist",
+      "NLP (Natural Language Processing) Engineer",
+      "Computer Vision Engineer"
+    ],
+    "target_audience": [
+      "IT Professionals",
+      "Non-IT Career Switchers",
+      "Fresh Graduates",
+      "Working Professionals",
+      "Diploma Holders",
+      "Professionals from Other Fields",
+      "Those seeking Salary Hike",
+      "Graduates with Less Than 60%"
+    ],
+    "key_skills": [
+      {
+        "skill": "Programming Skills",
+        "description": "Languages like Python and R help write code for data analysis, automation and AI model creation."
+      },
+      {
+        "skill": "Data Analysis and Visualization",
+        "description": "Tools like Power BI, Tableau and Matplotlib help convert raw data into useful charts and graphs."
+      },
+      {
+        "skill": "Machine Learning Knowledge",
+        "description": "Learn to build systems capable of making predictions and learning from data using regression, classification and clustering algorithms."
+      },
+      {
+        "skill": "Statistical and Mathematical Skills",
+        "description": "Foundation in statistics, calculus, linear algebra and probability needed for AI and data models."
+      },
+      {
+        "skill": "Problem-Solving and Critical Thinking",
+        "description": "Approach challenges logically using data-driven methods and evaluate results for better decision-making."
+      }
+    ],
+    "key_job_roles_details": [
+      {
+        "role": "Data Scientist",
+        "description": "Gathers, examines and interprets large data sets to help organizations make wise decisions using programming, statistical tools and visualization strategies."
+      },
+      {
+        "role": "Machine Learning Engineer",
+        "description": "Develops, implements and designs algorithms that allow systems to learn on their own. Requires strong knowledge of programming, mathematics and data structures."
+      },
+      {
+        "role": "AI Engineer",
+        "description": "Responsible for creating intelligent systems capable of speech processing, image recognition and decision making using frameworks like TensorFlow and PyTorch."
+      },
+      {
+        "role": "Data Analyst",
+        "description": "Examines datasets to identify patterns, trends and relationships using tools like Excel, Power BI or Tableau to visualize data and present findings."
+      },
+      {
+        "role": "Research Scientist (AI and Data Science)",
+        "description": "Works on developing new algorithms, models and technologies to advance artificial intelligence, conducting experiments and publishing research."
+      }
+    ],
+    "top_hiring_companies": [
+      {
+        "name": "Google",
+        "description": "Top global employer for AI and Data Science experts. Uses AI for products like Google Search, Assistant and Cloud services."
+      },
+      {
+        "name": "IBM",
+        "description": "Global leader in technology and innovation. Focuses on data analytics, automation and cognitive computing through its Watson AI platform."
+      },
+      {
+        "name": "Amazon",
+        "description": "Recruits thousands of AI and Data Science professionals to improve e-commerce, logistics and cloud computing operations."
+      },
+      {
+        "name": "Microsoft",
+        "description": "Invests heavily in AI and Data Science research. Offers opportunities to work on Azure AI, Microsoft 365 and cloud-based analytics tools."
+      },
+      {
+        "name": "Accenture",
+        "description": "Global consulting and technology firm employing AI and Data Science professionals for digital transformation projects worldwide."
+      }
+    ],
+    "placement_support": [
+      "Job Openings",
+      "Data Science and AI Internships",
+      "Sample Resume",
+      "Interview Questions",
+      "Company-Specific Interview Questions",
+      "Accommodation Support",
+      "Job Portal Access"
+    ],
+    "whats_included": [
+      {
+        "feature": "Free Aptitude and Technical Skills Training",
+        "details": [
+          "Learn basic maths and logical thinking to solve problems easily",
+          "Understand simple coding and technical concepts step by step",
+          "Get ready for exams and interviews with regular practice"
+        ]
+      },
+      {
+        "feature": "Hands-On Projects",
+        "details": [
+          "Work on real-time projects to apply what you learn",
+          "Build mini apps and tools daily to enhance your coding skills",
+          "Gain practical experience just like in real jobs"
+        ]
+      },
+      {
+        "feature": "AI Powered Self Interview Practice Portal",
+        "details": [
+          "Practice interview questions with instant AI feedback",
+          "Improve your answers by speaking and reviewing them",
+          "Build confidence with real-time mock interview sessions"
+        ]
+      },
+      {
+        "feature": "Interview Preparation For Freshers",
+        "details": [
+          "Practice company-based interview questions",
+          "Take online assessment tests to crack interviews",
+          "Practice confidently with real-world interview and project-based questions"
+        ]
+      },
+      {
+        "feature": "LMS Self Learning Platform",
+        "details": [
+          "Explore expert trainer videos and documents to boost your learning",
+          "Study anytime with on-demand videos and detailed documents",
+          "Quickly find topics with organized learning materials"
+        ]
+      }
+    ],
+    "free_addons": ["Aptitude Training", "Spoken English"],
+    "placement_activities": [
+      "Daily Task",
+      "Soft Skills",
+      "Projects",
+      "Group Discussions",
+      "Resume Preparation",
+      "Mock Interview"
+    ],
+    "current_job_openings": [
+      {
+        "title": "Junior Data Analyst",
+        "company_code": "TGR345",
+        "location": "Chennai, Tamil Nadu",
+        "salary": "₹4.0 LPA – ₹6.0 LPA",
+        "qualification": "B.Sc / B.Com / B.E.",
+        "experience": "0–2 years"
+      },
+      {
+        "title": "AI & Data Science Associate",
+        "company_code": "ABC287",
+        "location": "Chennai, Tamil Nadu",
+        "salary": "₹42,000 – ₹58,000 per month",
+        "qualification": "B.Tech / B.E. in Computer Science",
+        "experience": "0–2 years"
+      },
+      {
+        "title": "Machine Learning Trainee",
+        "company_code": "DTA789",
+        "location": "Chennai, Tamil Nadu",
+        "salary": "₹37,000 – ₹54,000 per month",
+        "qualification": "B.Sc / B.E. / B.Tech in Mathematics, Statistics",
+        "experience": "0–2 years"
+      },
+      {
+        "title": "Data Engineer",
+        "company_code": "TSS923",
+        "location": "Chennai, Tamil Nadu",
+        "salary": "₹42,000 – ₹67,000 per month",
+        "qualification": "B.E./B.Tech in Computer Science, IT or Data Engineering",
+        "experience": "0–2 years"
+      },
+      {
+        "title": "Business Intelligence & Data Science Analyst",
+        "company_code": "IGS598",
+        "location": "Chennai, Tamil Nadu",
+        "salary": "₹33,000 – ₹50,000 per month",
+        "qualification": "B.Sc / B.Com / B.E. in Statistics, Analytics, Computer Science",
+        "experience": "0–2 years"
+      },
+      {
+        "title": "AI Model Development Associate",
+        "company_code": "SAL312",
+        "location": "Chennai, Tamil Nadu",
+        "salary": "₹42,000 – ₹58,000 per month",
+        "qualification": "B.Tech / B.E. in Computer Science, Electronics or allied engineering",
+        "experience": "0–2 years"
+      },
+      {
+        "title": "Data Science Research Associate",
+        "company_code": "NGA657",
+        "location": "Chennai, Tamil Nadu",
+        "salary": "₹4.0 LPA – ₹6.5 LPA",
+        "qualification": "MSc / M.Tech / B.E. / B.Tech in Data Science, Computer Science, Statistics",
+        "experience": "0–2 years"
+      },
+      {
+        "title": "Analytics & AI Solutions Developer",
+        "company_code": "VTA843",
+        "location": "Chennai, Tamil Nadu",
+        "salary": "₹42,000 – ₹67,000 per month",
+        "qualification": "B.E. / B.Tech / B.Sc in Computer Science, Data Science or Math/Stats",
+        "experience": "0–2 years"
+      }
+    ]
+  }
+}

@@ -47,6 +47,10 @@ export interface Course {
   guaranteeText?: string;
   bullets?: string[];
   targetRole?: string;
+  projects?: { title: string; description: string }[];
+  whatsIncluded?: { feature: string; details: string[] }[];
+  targetAudience?: string[];
+  keySkills?: { skill: string; description: string }[];
 }
 
 const commonSlots: TimeSlot[] = [
@@ -162,73 +166,161 @@ export const courses: Course[] = [
   },
   {
     id: "2",
-    title: "Data Science with AI",
+    title: "Data Science and AI Training",
     slug: "data-science-ai",
-    description: "Become a future-ready Data Scientist. Learn Python, Machine Learning, Deep Learning, and Generative AI.",
+    description: "The Data Science and AI Training helps beginners build strong skills in AI, machine learning and data analytics through step-by-step learning.",
     icon: BrainCircuit,
     duration: "6 Months",
     level: "Advanced",
     rating: 4.9,
-    students: 8400,
+    students: 11000,
     tags: ["Python", "ML", "AI", "TensorFlow"],
     tools: [
       { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-      { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
       { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
-      { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" }
+      { name: "Scikit-learn", icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" },
+      { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
+      { name: "Jupyter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
+      { name: "Power BI", icon: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" }
     ],
     color: "bg-purple-600",
-    salaryRange: "6 LPA - 25 LPA",
-    originalPrice: 35000,
-    discountedPrice: 19999,
-    features: ["Generative AI Focus", "GPU Lab Access", "MNC Partnerships"],
+    salaryRange: "4 LPA - 6 LPA",
+    originalPrice: 36000,
+    discountedPrice: 16500,
+    targetRole: "Data Scientist",
+    guaranteeText: "Join Our 100% Job Guaranteed",
+    bullets: [
+      "Gain expertise in Python, Machine Learning and Data Visualization from scratch",
+      "Complete career assistance with placement opportunities from top companies",
+      "Work on hands-on projects and case studies applying AI and Data Science concepts",
+      "Beginner-friendly sessions, real-time projects and personalized career mentorship",
+      "Earn an industry-recognized certification supporting placement and career growth"
+    ],
+    features: ["Generative AI Focus", "Complete career assistance", "Hands-On Projects"],
+    stats: [
+      { label: "Freshers To IT", value: "11,645+" },
+      { label: "NON-IT To IT", value: "5,764+" },
+      { label: "Career Gap", value: "7,834+" },
+      { label: "Less Then 60%", value: "4,978+" }
+    ],
     journey: [
       { 
         step: "Python for DS", 
         detail: "Programming and data manipulation",
-        extendedInfo: "Mastering NumPy, Pandas, and Matplotlib for extensive exploratory data analysis."
+        extendedInfo: "Introduction to Python – Syntax, Variables, Data Types. Libraries like NumPy, Pandas for data manipulation."
       },
       { 
-        step: "Math & Stats", 
-        detail: "Probability and Linear Algebra",
-        extendedInfo: "The mathematical backbone of ML: Calculus, Linear Algebra, and Inferential Statistics."
+        step: "Data Visualization", 
+        detail: "Charts, Graphs and Plots",
+        extendedInfo: "Matplotlib & Seaborn – Charts, Graphs and Plots. Tableau Basics – Dashboards and Interactive Reports."
       },
       { 
-        step: "ML & AI", 
-        detail: "Deep learning and neural networks",
-        extendedInfo: "Building and deploying Regression, Clustering, and Neural Network models using Scikit-Learn."
+        step: "Machine Learning Fundamentals", 
+        detail: "Supervised & Unsupervised Learning",
+        extendedInfo: "Supervised Learning – Regression, Classification. Unsupervised Learning – Clustering, Dimensionality Reduction."
       },
       { 
-        step: "Gen AI", 
-        detail: "LLMs and prompt engineering",
-        extendedInfo: "Working with OpenAI API, LangChain, and fine-tuning models like Llama for custom tasks."
+        step: "Deep Learning & AI", 
+        detail: "Neural Network Basics",
+        extendedInfo: "Neural Network Basics. Frameworks – TensorFlow, Keras, PyTorch. Image & Text Processing."
       }
     ],
-    slots: commonSlots,
+    slots: [
+      { time: "08:00 AM & 10:00 AM", type: "Online", availability: "Filling Fast" },
+      { time: "10:00 AM - 01:30 PM", type: "Online", availability: "Available" },
+      { time: "09:00 AM - 02:00 PM", type: "Online", availability: "Available" }
+    ],
     modules: [
       {
-        title: "Python Programming Fundamentals",
-        topics: ["Python Basics", "Data Structures", "Functions", "OOPs in Python"]
+        title: "Python for Data Science",
+        topics: ["Introduction to Python – Syntax, Variables", "Data Structures – Lists, Tuples", "Functions & Loops", "Libraries – NumPy, Pandas"]
       },
       {
-        title: "Statistics & Probability",
-        topics: ["Descriptive Statistics", "Inferential Statistics", "Probability Distributions", "Hypothesis Testing"]
+        title: "R Programming Basics",
+        topics: ["Introduction to R – Syntax", "Data Frames and Vectors", "Statistical Functions", "Data Handling – dplyr"]
       },
       {
-        title: "Machine Learning Algorithms",
-        topics: ["Supervised Learning", "Unsupervised Learning", "Ensemble Methods", "Model Evaluation"]
+        title: "Data Visualization",
+        topics: ["Matplotlib & Seaborn", "Tableau Basics", "Plotly – Interactive Visualizations", "Visual Storytelling"]
       },
       {
-        title: "Deep Learning & Neural Networks",
-        topics: ["Artificial Neural Networks", "Convolutional Neural Networks", "Recurrent Neural Networks", "Optimization Techniques"]
+        title: "SQL & Database Management",
+        topics: ["Introduction to SQL", "Data Extraction", "Database Management", "Integration"]
       },
       {
-        title: "Natural Language Processing (NLP)",
-        topics: ["Text Processing", "Sentiment Analysis", "Named Entity Recognition", "Word Embeddings"]
+        title: "Machine Learning Fundamentals",
+        topics: ["Supervised Learning", "Unsupervised Learning", "Model Evaluation", "Tools – Scikit-learn"]
       },
       {
-        title: "Generative AI & LLMs",
-        topics: ["Introduction to Gen AI", "Large Language Models", "Prompt Engineering", "Fine-tuning Models"]
+        title: "Deep Learning & AI Frameworks",
+        topics: ["Neural Network Basics", "Frameworks – TensorFlow, PyTorch", "Image & Text Processing", "Model Training"]
+      }
+    ],
+    projects: [
+      {
+        title: "Crop Disease Detection",
+        description: "Develop a plant disease detection system using Python, TensorFlow, and CNN models to analyze leaf images."
+      },
+      {
+        title: "Sales Forecasting Dashboard",
+        description: "Develop an interactive Power BI dashboard powered by Python and ARIMA models. Analyze sales data trends."
+      },
+      {
+        title: "Voice Emotion Recognition",
+        description: "Create an AI model using Python, Librosa and RNNs to detect emotions from speech."
+      },
+      {
+        title: "Spam Email Classifier",
+        description: "Build a spam detection system using Python, Scikit-learn and NLP techniques like TF-IDF."
+      }
+    ],
+    whatsIncluded: [
+      {
+        feature: "Free Aptitude and Technical Skills Training",
+        details: [
+          "Learn basic maths and logical thinking to solve problems easily",
+          "Understand simple coding and technical concepts step by step",
+          "Get ready for exams and interviews with regular practice"
+        ]
+      },
+      {
+        feature: "Hands-On Projects",
+        details: [
+          "Work on real-time projects to apply what you learn",
+          "Build mini apps and tools daily to enhance your coding skills"
+        ]
+      },
+      {
+        feature: "AI Powered Self Interview Practice Portal",
+        details: [
+          "Practice interview questions with instant AI feedback",
+          "Improve your answers by speaking and reviewing them"
+        ]
+      }
+    ],
+    targetAudience: [
+      "IT Professionals",
+      "Non-IT Career Switchers",
+      "Fresh Graduates",
+      "Diploma Holders",
+      "Graduates with Less Than 60%"
+    ],
+    keySkills: [
+      {
+        skill: "Programming Skills",
+        description: "Languages like Python and R help write code for data analysis, automation and AI model creation."
+      },
+      {
+        skill: "Data Analysis and Visualization",
+        description: "Tools like Power BI, Tableau and Matplotlib help convert raw data into useful charts and graphs."
+      },
+      {
+        skill: "Machine Learning Knowledge",
+        description: "Learn to build systems capable of making predictions and learning from data using regression, classification and clustering algorithms."
+      },
+      {
+        skill: "Problem-Solving and Critical Thinking",
+        description: "Approach challenges logically using data-driven methods and evaluate results for better decision-making."
       }
     ]
   },
