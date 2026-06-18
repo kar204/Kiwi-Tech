@@ -11,7 +11,6 @@ export function Navbar() {
   const navLinks = [
     { name: "All Courses", href: "/courses" },
     { name: "Bootcamp Trial", href: "/bootcamp" },
-    { name: "Placements", href: "/#placements" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];

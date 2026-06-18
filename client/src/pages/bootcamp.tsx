@@ -62,7 +62,7 @@ export default function Bootcamp() {
               transition={{ delay: 0.2 }}
               className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto"
             >
-              Not sure which course is right for you? Try our 1-hour interactive demo sessions for any course at just ₹999.
+              Not sure which course is right for you? Try our 1-hour interactive demo sessions for any course absolutely free.
             </motion.p>
 
             <motion.div 
@@ -72,8 +72,8 @@ export default function Bootcamp() {
               className="inline-block bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6"
             >
               <div className="text-sm text-slate-300 mb-1 font-medium uppercase tracking-wider">Special Trial Price</div>
-              <div className="text-5xl font-bold text-white mb-2">₹999<span className="text-xl text-slate-400 font-normal">/session</span></div>
-              <p className="text-sm text-slate-400">100% adjustable against full course fee if you enroll.</p>
+              <div className="text-5xl font-bold text-white mb-2">Free<span className="text-xl text-slate-400 font-normal">/session</span></div>
+              <p className="text-sm text-slate-400">Register to get a personalized demo via email.</p>
             </motion.div>
           </div>
         </section>
@@ -119,8 +119,8 @@ export default function Bootcamp() {
                 <div className="w-16 h-16 mx-auto bg-purple-600/10 rounded-2xl flex items-center justify-center mb-4">
                   <ShieldCheck className="h-8 w-8 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-bold font-heading mb-2">Risk-Free Trial</h3>
-                <p className="text-slate-600">The ₹999 fee is fully adjusted against your main course fee when you enroll.</p>
+                <h3 className="text-xl font-bold font-heading mb-2">No Credit Card Required</h3>
+                <p className="text-slate-600">Register and attend the demo class absolutely free to experience our teaching methodology.</p>
               </motion.div>
             </div>
           </div>
@@ -199,17 +199,21 @@ export default function Bootcamp() {
                     <div className="pt-6 border-t border-slate-100 space-y-4">
                       <div className="flex justify-between items-center mb-4">
                         <span className="text-slate-600 font-medium">Session Fee</span>
-                        <span className="text-2xl font-bold text-slate-900">₹999</span>
+                        <span className="text-2xl font-bold text-[#8bc34a]">Free</span>
                       </div>
                       
                       <Button 
                         disabled={!selectedCourse || !selectedSlot}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          alert("Thank you! We will email you the session details shortly.");
+                        }}
                         className="w-full h-12 text-base font-bold bg-[#8bc34a] hover:bg-[#7cb342] shadow-lg shadow-[#8bc34a]/20 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        {!selectedCourse ? "Select Course" : !selectedSlot ? "Select Time Slot" : "Proceed to Payment"}
+                        {!selectedCourse ? "Select Course" : !selectedSlot ? "Select Time Slot" : "Register for Demo Class"}
                       </Button>
                       <p className="text-xs text-center text-slate-500">
-                        Secure checkout. Fee adjustable against full course enrollment.
+                        We will send the joining link to your registered email address.
                       </p>
                     </div>
                   </CardContent>

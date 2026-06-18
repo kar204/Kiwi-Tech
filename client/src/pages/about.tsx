@@ -6,10 +6,9 @@ import { Badge } from "@/components/ui/badge";
 
 export default function About() {
   const stats = [
-    { icon: Users, label: "60k+ Students Trained", value: "60,000+" },
-    { icon: Trophy, label: "95% Placement Rate", value: "95%" },
-    { icon: Zap, label: "10 Industry-Leading Courses", value: "10+" },
-    { icon: CheckCircle2, label: "100% Job Guarantee", value: "100%" }
+    { icon: Users, label: "Students Trained", value: "5000+" },
+    { icon: Trophy, label: "Placement Rate", value: "93-97%" },
+    { icon: Zap, label: "Industry-Leading Courses", value: "10+" }
   ];
 
   const features = [
@@ -18,9 +17,8 @@ export default function About() {
     "Real-world projects and capstone assignments",
     "Lifetime access to course materials",
     "1:1 mentorship and career guidance",
-    "100% placement assistance",
-    "Affordable pricing from ₹12,000",
-    "NASSCOM certified programs"
+    "Placement assistance",
+    "Affordable pricing from ₹19,000"
   ];
 
   return (
