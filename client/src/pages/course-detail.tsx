@@ -257,24 +257,21 @@ export default function CourseDetail() {
             </div>
 
             <div className="relative">
-              {/* Horizontal Line for Desktop */}
-              <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-100 -translate-y-1/2" />
-              
-              <div className="grid lg:grid-cols-4 gap-8 relative z-10">
+              <div className="grid lg:grid-cols-3 gap-8 relative z-10">
                 {course.journey.map((step, i) => (
                   <motion.div 
                     key={i}
                     whileHover={{ scale: 1.02 }}
                     onClick={() => setSelectedStep(step)}
-                    className="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 cursor-pointer group"
+                    className="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 cursor-pointer group flex flex-col h-full"
                   >
-                    <div className={`h-12 w-12 rounded-2xl ${course.color} flex items-center justify-center text-white font-bold text-xl mb-6 shadow-lg shadow-current/20`}>
+                    <div className={`h-12 w-12 rounded-2xl ${course.color} flex items-center justify-center text-white font-bold text-xl mb-6 shadow-lg shadow-current/20 shrink-0`}>
                       {i + 1}
                     </div>
                     <h4 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">{step.step}</h4>
-                    <p className="text-slate-500 text-sm leading-relaxed mb-4">{step.detail}</p>
-                    <div className="mt-auto flex items-center text-primary font-bold text-xs uppercase tracking-widest">
-                      Read More <Info className="ml-1 h-3 w-3" />
+                    <p className="text-slate-500 text-sm leading-relaxed mb-4 flex-grow">{step.detail}</p>
+                    <div className="mt-auto flex items-center text-primary font-bold text-xs uppercase tracking-widest pt-4 border-t border-slate-50">
+                      View Details <Info className="ml-1 h-3 w-3" />
                     </div>
                   </motion.div>
                 ))}
@@ -294,7 +291,7 @@ export default function CourseDetail() {
                     <BookOpen className="h-4 w-4" /> Course Curriculum
                   </div>
                   <h2 className="font-heading text-4xl lg:text-5xl font-bold leading-tight">
-                    Comprehensive <span className="text-primary">Syllabus</span>
+                    Extensive <span className="text-primary">Syllabus</span>
                   </h2>
                   <p className="text-lg text-slate-500 max-w-2xl">
                     Master the skills that top employers demand. Our curriculum is designed by industry experts and regularly updated to match current market trends.
@@ -320,13 +317,28 @@ export default function CourseDetail() {
                             </div>
                           </AccordionTrigger>
                           <AccordionContent className="px-6 pb-6 pt-2 pl-[5.25rem]">
-                            <ul className="grid sm:grid-cols-2 gap-y-3 gap-x-6">
-                              {module.topics.map((topic, idx) => (
+                            <ul className="grid sm:grid-cols-2 gap-y-6 gap-x-6">
+                              {module.topics.map((topic: any, idx) => (
                                 <li key={idx} className="flex items-start gap-3">
                                   <div className="mt-1 bg-primary/10 p-1 rounded-md shrink-0">
                                     <CheckCircle2 className="h-3 w-3 text-primary" />
                                   </div>
-                                  <span className="text-slate-600 font-medium leading-tight">{topic}</span>
+                                  <div>
+                                    {typeof topic === 'string' ? (
+                                      <span className="text-slate-600 font-medium leading-tight">{topic}</span>
+                                    ) : (
+                                      <>
+                                        <span className="text-slate-900 font-bold leading-tight block mb-1">
+                                          {topic.title}
+                                        </span>
+                                        {topic.description && (
+                                          <span className="text-slate-600 text-sm leading-relaxed block">
+                                            {topic.description}
+                                          </span>
+                                        )}
+                                      </>
+                                    )}
+                                  </div>
                                 </li>
                               ))}
                             </ul>

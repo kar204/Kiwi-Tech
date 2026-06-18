@@ -36,7 +36,7 @@ export interface Course {
   tags: string[];
   tools: { name: string; icon: string }[];
   color: string;
-  modules: { title: string; topics: string[] }[];
+  modules: { title: string; topics: (string | { title: string; description: string })[] }[];
   journey: JourneyStep[];
   slots: TimeSlot[];
   features: string[];
@@ -205,24 +205,49 @@ export const courses: Course[] = [
     ],
     journey: [
       { 
-        step: "Python for DS", 
-        detail: "Programming and data manipulation",
-        extendedInfo: "Introduction to Python – Syntax, Variables, Data Types. Libraries like NumPy, Pandas for data manipulation."
+        step: "Python", 
+        detail: "Robust libraries for AI and Data Science.",
+        extendedInfo: "One of the most popular tools used in AI and Data Science. Robust libraries like NumPy, Pandas and Scikit-learn make it simple to learn for data analysis and machine learning."
       },
       { 
-        step: "Data Visualization", 
-        detail: "Charts, Graphs and Plots",
-        extendedInfo: "Matplotlib & Seaborn – Charts, Graphs and Plots. Tableau Basics – Dashboards and Interactive Reports."
+        step: "TensorFlow", 
+        detail: "Google's powerful open-source framework.",
+        extendedInfo: "Created by Google, makes it simple to create and train machine learning and deep learning models. Supports image recognition, natural language processing and predictive analytics."
       },
       { 
-        step: "Machine Learning Fundamentals", 
-        detail: "Supervised & Unsupervised Learning",
-        extendedInfo: "Supervised Learning – Regression, Classification. Unsupervised Learning – Clustering, Dimensionality Reduction."
+        step: "R Programming", 
+        detail: "A statistical programming language.",
+        extendedInfo: "Used for mapping, data analysis and forecasting. Especially useful for understanding data trends through charts and graphs."
       },
       { 
-        step: "Deep Learning & AI", 
-        detail: "Neural Network Basics",
-        extendedInfo: "Neural Network Basics. Frameworks – TensorFlow, Keras, PyTorch. Image & Text Processing."
+        step: "Jupyter Notebook", 
+        detail: "An interactive coding environment.",
+        extendedInfo: "An interactive environment making it simple to write, execute and view code. Allows combining code, text and visuals in one place — perfect for students and professionals."
+      },
+      { 
+        step: "Power BI", 
+        detail: "A data visualization solution.",
+        extendedInfo: "Assists users in turning raw data into useful insights through interactive dashboards and reports. Great tool for presenting data visually."
+      },
+      { 
+        step: "PyTorch", 
+        detail: "Deep learning and AI research.",
+        extendedInfo: "Developed by Facebook, popular for deep learning and AI research. Offers an easy-to-understand interface and dynamic computation with strong GPU acceleration support."
+      },
+      { 
+        step: "Scikit-learn", 
+        detail: "Data science and machine learning tasks.",
+        extendedInfo: "Simple and easy-to-use framework for data science and machine learning tasks. Has tools for clustering, regression, classification and preprocessing data."
+      },
+      { 
+        step: "Keras", 
+        detail: "High-level neural network framework.",
+        extendedInfo: "A high-level neural network framework that makes deep learning straightforward. Runs on top of TensorFlow and allows building AI models with fewer lines of code."
+      },
+      { 
+        step: "Apache Spark", 
+        detail: "Processing and analyzing large amounts of data.",
+        extendedInfo: "A powerful framework for processing and analyzing large amounts of data. Can handle big datasets effectively and facilitates real-time data analytics and machine learning."
       }
     ],
     slots: [
@@ -233,27 +258,57 @@ export const courses: Course[] = [
     modules: [
       {
         title: "Python for Data Science",
-        topics: ["Introduction to Python – Syntax, Variables", "Data Structures – Lists, Tuples", "Functions & Loops", "Libraries – NumPy, Pandas"]
+        topics: [
+          { title: "Introduction to Python", description: "Learn Python from scratch. Understand Syntax, Variables, Data Types, and foundational concepts required to write efficient code." },
+          { title: "Data Structures", description: "In-depth look at core structures: Lists, Tuples, Dictionaries, and Sets. Learn how to store and organize data efficiently." },
+          { title: "Functions & Loops", description: "Master Control Flow, Defining Functions, and iterative logic to automate repetitive tasks and build reusable code blocks." },
+          { title: "Essential Libraries", description: "Hands-on experience using NumPy for high-performance numerical operations and Pandas for powerful data manipulation and cleaning." }
+        ]
       },
       {
         title: "R Programming Basics",
-        topics: ["Introduction to R – Syntax", "Data Frames and Vectors", "Statistical Functions", "Data Handling – dplyr"]
+        topics: [
+          { title: "Introduction to R", description: "Get started with R programming language. Understand its Syntax, Data Types, and fundamental Operators used in statistical computing." },
+          { title: "Data Frames and Vectors", description: "Learn essential techniques for creating, managing, and manipulating data efficiently using Vectors and Data Frames." },
+          { title: "Statistical Functions", description: "Apply core statistical measures like Mean, Median, Variance, and Standard Deviation in practical, real-world data scenarios." },
+          { title: "Data Handling", description: "Master advanced data wrangling techniques using industry-standard packages like dplyr and tidyr to clean and transform datasets." }
+        ]
       },
       {
         title: "Data Visualization",
-        topics: ["Matplotlib & Seaborn", "Tableau Basics", "Plotly – Interactive Visualizations", "Visual Storytelling"]
+        topics: [
+          { title: "Matplotlib & Seaborn", description: "Create rich, informative, and visually appealing Charts, Graphs and Plots to uncover hidden patterns in complex datasets." },
+          { title: "Tableau Basics", description: "Build interactive Dashboards and comprehensive Reports to communicate insights effectively to non-technical stakeholders." },
+          { title: "Plotly", description: "Develop highly interactive and dynamic Visualizations tailored specifically for Web applications and live presentations." },
+          { title: "Visual Storytelling", description: "Learn the art of representing data clearly and concisely, turning raw numbers into compelling narratives for business decisions." }
+        ]
       },
       {
         title: "SQL & Database Management",
-        topics: ["Introduction to SQL", "Data Extraction", "Database Management", "Integration"]
+        topics: [
+          { title: "Introduction to SQL", description: "Master foundational database concepts including advanced Queries, relational Joins, and powerful built-in Functions." },
+          { title: "Data Extraction", description: "Gain proficiency in extracting precise data using SELECT, WHERE, GROUP BY, and HAVING statements across complex tables." },
+          { title: "Database Management", description: "Understand the core operations of relational data storage using industry-leading systems like MySQL and PostgreSQL." },
+          { title: "Integration", description: "Learn how to seamlessly connect SQL databases directly with Python and R scripts for automated data pipelines." }
+        ]
       },
       {
         title: "Machine Learning Fundamentals",
-        topics: ["Supervised Learning", "Unsupervised Learning", "Model Evaluation", "Tools – Scikit-learn"]
+        topics: [
+          { title: "Supervised Learning", description: "Deep dive into predictive modeling using advanced Regression techniques and powerful Classification algorithms." },
+          { title: "Unsupervised Learning", description: "Discover hidden structures in unlabeled data by applying Clustering and Dimensionality Reduction techniques." },
+          { title: "Model Evaluation", description: "Learn to rigorously measure and improve model performance using Accuracy, Precision, Recall, F1-Score, and ROC-AUC." },
+          { title: "Tools & Pipelines", description: "Utilize Scikit-learn to build, deploy, and maintain robust end-to-end Machine Learning pipelines." }
+        ]
       },
       {
         title: "Deep Learning & AI Frameworks",
-        topics: ["Neural Network Basics", "Frameworks – TensorFlow, PyTorch", "Image & Text Processing", "Model Training"]
+        topics: [
+          { title: "Neural Network Basics", description: "Understand the core building blocks of deep learning: Perceptrons, hidden layers, Weights, Biases, and Activation Functions." },
+          { title: "AI Frameworks", description: "Get practical, hands-on application experience building models with industry-standard frameworks: TensorFlow, Keras, and PyTorch." },
+          { title: "Image & Text Processing", description: "Explore specialized architectures by building Convolutional Neural Networks (CNNs) for images and Recurrent Neural Networks (RNNs) for Natural Language Processing." },
+          { title: "Model Training & Optimization", description: "Master the training process by applying Gradient Descent, managing Epochs, tuning Hyperparameters, and mitigating overfitting." }
+        ]
       }
     ],
     projects: [
