@@ -1,5 +1,5 @@
-import { useRoute } from "wouter";
-import { courses, JourneyStep } from "@/lib/courses";
+import { useRoute, Link } from "wouter";
+import { courses, JourneyStep, TimeSlot } from "@/lib/courses";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import NotFound from "@/pages/not-found";
@@ -11,6 +11,16 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { 
   CheckCircle2, 
   Clock, 
@@ -28,7 +38,8 @@ import {
   Rocket,
   Info,
   X,
-  BookOpen
+  BookOpen,
+  Home
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
@@ -39,18 +50,25 @@ export default function CourseDetail() {
   const slug = params?.slug;
   const course = courses.find((c) => c.slug === slug);
   const [selectedStep, setSelectedStep] = useState<JourneyStep | null>(null);
+  const [selectedSlot, setSelectedSlot] = useState<TimeSlot | null>(null);
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
 
   if (!course) {
     return <NotFound />;
   }
 
   const handleDownload = () => {
-    // Mock PDF download
     const link = document.createElement("a");
     link.href = "#";
     link.download = `${course.slug}-syllabus.pdf`;
     link.click();
     alert("Syllabus download started! (Demo)");
+  };
+
+  const handleDemoSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert("Demo slot booked successfully! We will contact you soon.");
+    setIsDemoModalOpen(false);
   };
 
   return (
@@ -67,6 +85,14 @@ export default function CourseDetail() {
            />
            
           <div className="container mx-auto px-4 md:px-6 relative z-20">
+            <div className="mb-6">
+              <Link href="/">
+                <Button variant="ghost" className="text-white hover:text-white hover:bg-white/10 -ml-4">
+                  <Home className="h-4 w-4 mr-2" />
+                  Back to Home
+                </Button>
+              </Link>
+            </div>
             <div className="grid lg:grid-cols-3 gap-12 items-center">
               <div className="lg:col-span-2 space-y-8">
                 <motion.div 
@@ -201,7 +227,16 @@ export default function CourseDetail() {
                       </p>
                       <div className="grid grid-cols-1 gap-2">
                         {course.slots.map((slot, i) => (
-                          <div key={i} className="flex items-center justify-between p-3 rounded-xl border border-slate-100 bg-white hover:border-[#8bc34a]/30 transition-colors">
+                          <div 
+                            key={i}
+                            onClick={() => {
+                              if (slot.availability !== 'Full') {
+                                setSelectedSlot(slot);
+                                setIsDemoModalOpen(true);
+                              }
+                            }}
+                            className={`flex items-center justify-between p-3 rounded-xl border bg-white transition-colors cursor-pointer ${slot.availability === 'Full' ? 'border-slate-100 opacity-50 cursor-not-allowed' : 'border-slate-100 hover:border-[#8bc34a]/30'}`}
+                          >
                             <span className="text-sm font-medium">{slot.time}</span>
                             <Badge variant={slot.availability === 'Full' ? 'destructive' : 'outline'} className="text-[10px]">
                               {slot.availability}
@@ -212,9 +247,39 @@ export default function CourseDetail() {
                     </div>
                   </div>
                   
-                  <Button size="lg" className="w-full bg-[#8bc34a] hover:bg-[#7cb342] h-14 text-lg font-bold rounded-2xl shadow-lg shadow-[#8bc34a]/20">
-                    Book Free Demo
-                  </Button>
+                  <Dialog open={isDemoModalOpen} onOpenChange={setIsDemoModalOpen}>
+                    <DialogContent className="sm:max-w-[425px] rounded-3xl">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl font-bold">Book Demo for {course.title}</DialogTitle>
+                        <DialogDescription>
+                          Register for the free demo class at <span className="font-bold text-primary">{selectedSlot?.time}</span>.
+                        </DialogDescription>
+                      </DialogHeader>
+                      <form onSubmit={handleDemoSubmit} className="space-y-4 mt-4">
+                        <div className="space-y-2">
+                          <Label htmlFor="name">Full Name</Label>
+                          <Input id="name" required placeholder="John Doe" className="h-12 rounded-xl" />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="email">Email Address</Label>
+                          <Input id="email" type="email" required placeholder="john@example.com" className="h-12 rounded-xl" />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="phone">Phone Number</Label>
+                          <Input id="phone" type="tel" required placeholder="+91 9876543210" className="h-12 rounded-xl" />
+                        </div>
+                        <Button type="submit" className="w-full h-12 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-lg mt-2">
+                          Confirm Booking
+                        </Button>
+                      </form>
+                    </DialogContent>
+                  </Dialog>
+
+                  <Link href="/bootcamp">
+                    <Button size="lg" className="w-full bg-[#8bc34a] hover:bg-[#7cb342] h-14 text-lg font-bold rounded-2xl shadow-lg shadow-[#8bc34a]/20">
+                      Book Free Demo
+                    </Button>
+                  </Link>
                   <p className="text-center text-xs text-slate-400 mt-4">
                     *Limited seats to ensure quality interaction
                   </p>
