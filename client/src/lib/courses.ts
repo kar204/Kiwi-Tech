@@ -212,7 +212,63 @@ export const courses: Course[] = [
           { title: "Placement assistance", description: "Get exclusive access to partnered company job drives and dedicated placement support from the team." }
         ]
       }
+    ],
+    projects: [
+      { title: "Real-World Case Study 1", description: "Apply your skills to solve an industry-standard problem using modern frameworks." },
+      { title: "Portfolio Capstone Project", description: "Build a complete, end-to-end project to showcase your expertise to potential employers." },
+      { title: "Live API Integration", description: "Connect with external data sources and APIs to build dynamic, real-time applications." },
+      { title: "Performance Optimization", description: "Audit and optimize your application for speed, security, and scalability." }
+    ],
+    whatsIncluded: [
+      {
+        feature: "Free Aptitude and Technical Skills Training",
+        details: [
+          "Learn basic maths and logical thinking to solve problems easily",
+          "Understand simple coding and technical concepts step by step",
+          "Get ready for exams and interviews with regular practice"
+        ]
+      },
+      {
+        feature: "Hands-On Projects",
+        details: [
+          "Work on real-time projects to apply what you learn",
+          "Build mini apps and tools daily to enhance your coding skills"
+        ]
+      },
+      {
+        feature: "AI Powered Self Interview Practice Portal",
+        details: [
+          "Practice interview questions with instant AI feedback",
+          "Improve your answers by speaking and reviewing them"
+        ]
+      }
+    ],
+    targetAudience: [
+      "IT Professionals",
+      "Non-IT Career Switchers",
+      "Fresh Graduates",
+      "Diploma Holders",
+      "Graduates with Less Than 60%"
+    ],
+    keySkills: [
+      {
+        skill: "Core Technical Mastery",
+        description: "Develop a strong foundation in the primary tools and languages of this domain."
+      },
+      {
+        skill: "Problem Solving",
+        description: "Learn to approach complex business problems with logical, structured solutions."
+      },
+      {
+        skill: "Project Architecture",
+        description: "Understand how to design and structure large-scale applications from scratch."
+      },
+      {
+        skill: "Industry Best Practices",
+        description: "Adopt coding standards, version control, and methodologies used by top tech companies."
+      }
     ]
+
   },
   {
     id: "2",
@@ -450,6 +506,20 @@ export const courses: Course[] = [
     salaryRange: "5 LPA - 15 LPA",
     originalPrice: 35000,
     discountedPrice: 19999,
+    targetRole: "Software Engineer",
+    bullets: [
+      "Master the fundamental and advanced concepts with hands-on practice",
+      "Complete career assistance with placement opportunities from top companies",
+      "Work on real-time projects and case studies applying modern industry practices",
+      "Beginner-friendly sessions with personalized career mentorship",
+      "Earn an industry-recognized certification supporting placement and career growth"
+    ],
+    stats: [
+      { label: "Freshers To IT", value: "12,500+" },
+      { label: "NON-IT To IT", value: "6,200+" },
+      { label: "Career Gap", value: "8,100+" },
+      { label: "Less Then 60%", value: "5,300+" }
+    ],
     features: ["Microservices Focus", "Cloud Deployment", "Mock Interviews"],
     journey: [
       { 
@@ -539,7 +609,63 @@ export const courses: Course[] = [
           { title: "API Gateway Integration", description: "Implement a centralized entry point to route, secure, and monitor traffic across all microservices." }
         ]
       }
+    ],
+    projects: [
+      { title: "Real-World Case Study 1", description: "Apply your skills to solve an industry-standard problem using modern frameworks." },
+      { title: "Portfolio Capstone Project", description: "Build a complete, end-to-end project to showcase your expertise to potential employers." },
+      { title: "Live API Integration", description: "Connect with external data sources and APIs to build dynamic, real-time applications." },
+      { title: "Performance Optimization", description: "Audit and optimize your application for speed, security, and scalability." }
+    ],
+    whatsIncluded: [
+      {
+        feature: "Free Aptitude and Technical Skills Training",
+        details: [
+          "Learn basic maths and logical thinking to solve problems easily",
+          "Understand simple coding and technical concepts step by step",
+          "Get ready for exams and interviews with regular practice"
+        ]
+      },
+      {
+        feature: "Hands-On Projects",
+        details: [
+          "Work on real-time projects to apply what you learn",
+          "Build mini apps and tools daily to enhance your coding skills"
+        ]
+      },
+      {
+        feature: "AI Powered Self Interview Practice Portal",
+        details: [
+          "Practice interview questions with instant AI feedback",
+          "Improve your answers by speaking and reviewing them"
+        ]
+      }
+    ],
+    targetAudience: [
+      "IT Professionals",
+      "Non-IT Career Switchers",
+      "Fresh Graduates",
+      "Diploma Holders",
+      "Graduates with Less Than 60%"
+    ],
+    keySkills: [
+      {
+        skill: "Core Technical Mastery",
+        description: "Develop a strong foundation in the primary tools and languages of this domain."
+      },
+      {
+        skill: "Problem Solving",
+        description: "Learn to approach complex business problems with logical, structured solutions."
+      },
+      {
+        skill: "Project Architecture",
+        description: "Understand how to design and structure large-scale applications from scratch."
+      },
+      {
+        skill: "Industry Best Practices",
+        description: "Adopt coding standards, version control, and methodologies used by top tech companies."
+      }
     ]
+
   },
   {
     id: "4",
@@ -562,6 +688,20 @@ export const courses: Course[] = [
     salaryRange: "4.5 LPA - 14 LPA",
     originalPrice: 35000,
     discountedPrice: 19999,
+    targetRole: "Software Engineer",
+    bullets: [
+      "Master the fundamental and advanced concepts with hands-on practice",
+      "Complete career assistance with placement opportunities from top companies",
+      "Work on real-time projects and case studies applying modern industry practices",
+      "Beginner-friendly sessions with personalized career mentorship",
+      "Earn an industry-recognized certification supporting placement and career growth"
+    ],
+    stats: [
+      { label: "Freshers To IT", value: "12,500+" },
+      { label: "NON-IT To IT", value: "6,200+" },
+      { label: "Career Gap", value: "8,100+" },
+      { label: "Less Then 60%", value: "5,300+" }
+    ],
     features: ["Startup Ready", "API Mastery", "Portfolio Building"],
     journey: [
       { 
@@ -646,7 +786,63 @@ export const courses: Course[] = [
           { title: "AWS Deployment", description: "Deploy full-stack applications to AWS EC2, S3, or platform-as-a-service providers." }
         ]
       }
+    ],
+    projects: [
+      { title: "Real-World Case Study 1", description: "Apply your skills to solve an industry-standard problem using modern frameworks." },
+      { title: "Portfolio Capstone Project", description: "Build a complete, end-to-end project to showcase your expertise to potential employers." },
+      { title: "Live API Integration", description: "Connect with external data sources and APIs to build dynamic, real-time applications." },
+      { title: "Performance Optimization", description: "Audit and optimize your application for speed, security, and scalability." }
+    ],
+    whatsIncluded: [
+      {
+        feature: "Free Aptitude and Technical Skills Training",
+        details: [
+          "Learn basic maths and logical thinking to solve problems easily",
+          "Understand simple coding and technical concepts step by step",
+          "Get ready for exams and interviews with regular practice"
+        ]
+      },
+      {
+        feature: "Hands-On Projects",
+        details: [
+          "Work on real-time projects to apply what you learn",
+          "Build mini apps and tools daily to enhance your coding skills"
+        ]
+      },
+      {
+        feature: "AI Powered Self Interview Practice Portal",
+        details: [
+          "Practice interview questions with instant AI feedback",
+          "Improve your answers by speaking and reviewing them"
+        ]
+      }
+    ],
+    targetAudience: [
+      "IT Professionals",
+      "Non-IT Career Switchers",
+      "Fresh Graduates",
+      "Diploma Holders",
+      "Graduates with Less Than 60%"
+    ],
+    keySkills: [
+      {
+        skill: "Core Technical Mastery",
+        description: "Develop a strong foundation in the primary tools and languages of this domain."
+      },
+      {
+        skill: "Problem Solving",
+        description: "Learn to approach complex business problems with logical, structured solutions."
+      },
+      {
+        skill: "Project Architecture",
+        description: "Understand how to design and structure large-scale applications from scratch."
+      },
+      {
+        skill: "Industry Best Practices",
+        description: "Adopt coding standards, version control, and methodologies used by top tech companies."
+      }
     ]
+
   },
   {
     id: "5",
@@ -669,6 +865,20 @@ export const courses: Course[] = [
     salaryRange: "5 LPA - 18 LPA",
     originalPrice: 35000,
     discountedPrice: 19999,
+    targetRole: "Software Engineer",
+    bullets: [
+      "Master the fundamental and advanced concepts with hands-on practice",
+      "Complete career assistance with placement opportunities from top companies",
+      "Work on real-time projects and case studies applying modern industry practices",
+      "Beginner-friendly sessions with personalized career mentorship",
+      "Earn an industry-recognized certification supporting placement and career growth"
+    ],
+    stats: [
+      { label: "Freshers To IT", value: "12,500+" },
+      { label: "NON-IT To IT", value: "6,200+" },
+      { label: "Career Gap", value: "8,100+" },
+      { label: "Less Then 60%", value: "5,300+" }
+    ],
     features: ["Certification Prep", "Lab Credits", "DevOps Integration"],
     journey: [
       { 
@@ -748,7 +958,63 @@ export const courses: Course[] = [
           { title: "Mock Exams", description: "Take full-length, timed mock exams to assess readiness and identify areas needing improvement." }
         ]
       }
+    ],
+    projects: [
+      { title: "Real-World Case Study 1", description: "Apply your skills to solve an industry-standard problem using modern frameworks." },
+      { title: "Portfolio Capstone Project", description: "Build a complete, end-to-end project to showcase your expertise to potential employers." },
+      { title: "Live API Integration", description: "Connect with external data sources and APIs to build dynamic, real-time applications." },
+      { title: "Performance Optimization", description: "Audit and optimize your application for speed, security, and scalability." }
+    ],
+    whatsIncluded: [
+      {
+        feature: "Free Aptitude and Technical Skills Training",
+        details: [
+          "Learn basic maths and logical thinking to solve problems easily",
+          "Understand simple coding and technical concepts step by step",
+          "Get ready for exams and interviews with regular practice"
+        ]
+      },
+      {
+        feature: "Hands-On Projects",
+        details: [
+          "Work on real-time projects to apply what you learn",
+          "Build mini apps and tools daily to enhance your coding skills"
+        ]
+      },
+      {
+        feature: "AI Powered Self Interview Practice Portal",
+        details: [
+          "Practice interview questions with instant AI feedback",
+          "Improve your answers by speaking and reviewing them"
+        ]
+      }
+    ],
+    targetAudience: [
+      "IT Professionals",
+      "Non-IT Career Switchers",
+      "Fresh Graduates",
+      "Diploma Holders",
+      "Graduates with Less Than 60%"
+    ],
+    keySkills: [
+      {
+        skill: "Core Technical Mastery",
+        description: "Develop a strong foundation in the primary tools and languages of this domain."
+      },
+      {
+        skill: "Problem Solving",
+        description: "Learn to approach complex business problems with logical, structured solutions."
+      },
+      {
+        skill: "Project Architecture",
+        description: "Understand how to design and structure large-scale applications from scratch."
+      },
+      {
+        skill: "Industry Best Practices",
+        description: "Adopt coding standards, version control, and methodologies used by top tech companies."
+      }
     ]
+
   },
   {
     id: "6",
@@ -771,6 +1037,20 @@ export const courses: Course[] = [
     salaryRange: "3.5 LPA - 10 LPA",
     originalPrice: 35000,
     discountedPrice: 19999,
+    targetRole: "Software Engineer",
+    bullets: [
+      "Master the fundamental and advanced concepts with hands-on practice",
+      "Complete career assistance with placement opportunities from top companies",
+      "Work on real-time projects and case studies applying modern industry practices",
+      "Beginner-friendly sessions with personalized career mentorship",
+      "Earn an industry-recognized certification supporting placement and career growth"
+    ],
+    stats: [
+      { label: "Freshers To IT", value: "12,500+" },
+      { label: "NON-IT To IT", value: "6,200+" },
+      { label: "Career Gap", value: "8,100+" },
+      { label: "Less Then 60%", value: "5,300+" }
+    ],
     features: ["Mobile Testing", "API Automation", "Bug Tracking"],
     journey: [
       { 
@@ -850,7 +1130,63 @@ export const courses: Course[] = [
           { title: "Cucumber Options", description: "Configure test execution, utilize tags to run specific scenarios, and generate detailed HTML testing reports." }
         ]
       }
+    ],
+    projects: [
+      { title: "Real-World Case Study 1", description: "Apply your skills to solve an industry-standard problem using modern frameworks." },
+      { title: "Portfolio Capstone Project", description: "Build a complete, end-to-end project to showcase your expertise to potential employers." },
+      { title: "Live API Integration", description: "Connect with external data sources and APIs to build dynamic, real-time applications." },
+      { title: "Performance Optimization", description: "Audit and optimize your application for speed, security, and scalability." }
+    ],
+    whatsIncluded: [
+      {
+        feature: "Free Aptitude and Technical Skills Training",
+        details: [
+          "Learn basic maths and logical thinking to solve problems easily",
+          "Understand simple coding and technical concepts step by step",
+          "Get ready for exams and interviews with regular practice"
+        ]
+      },
+      {
+        feature: "Hands-On Projects",
+        details: [
+          "Work on real-time projects to apply what you learn",
+          "Build mini apps and tools daily to enhance your coding skills"
+        ]
+      },
+      {
+        feature: "AI Powered Self Interview Practice Portal",
+        details: [
+          "Practice interview questions with instant AI feedback",
+          "Improve your answers by speaking and reviewing them"
+        ]
+      }
+    ],
+    targetAudience: [
+      "IT Professionals",
+      "Non-IT Career Switchers",
+      "Fresh Graduates",
+      "Diploma Holders",
+      "Graduates with Less Than 60%"
+    ],
+    keySkills: [
+      {
+        skill: "Core Technical Mastery",
+        description: "Develop a strong foundation in the primary tools and languages of this domain."
+      },
+      {
+        skill: "Problem Solving",
+        description: "Learn to approach complex business problems with logical, structured solutions."
+      },
+      {
+        skill: "Project Architecture",
+        description: "Understand how to design and structure large-scale applications from scratch."
+      },
+      {
+        skill: "Industry Best Practices",
+        description: "Adopt coding standards, version control, and methodologies used by top tech companies."
+      }
     ]
+
   },
   {
     id: "7",
@@ -871,6 +1207,20 @@ export const courses: Course[] = [
     salaryRange: "5 LPA - 12 LPA",
     originalPrice: 45000,
     discountedPrice: 19999,
+    targetRole: "Software Engineer",
+    bullets: [
+      "Master the fundamental and advanced concepts with hands-on practice",
+      "Complete career assistance with placement opportunities from top companies",
+      "Work on real-time projects and case studies applying modern industry practices",
+      "Beginner-friendly sessions with personalized career mentorship",
+      "Earn an industry-recognized certification supporting placement and career growth"
+    ],
+    stats: [
+      { label: "Freshers To IT", value: "12,500+" },
+      { label: "NON-IT To IT", value: "6,200+" },
+      { label: "Career Gap", value: "8,100+" },
+      { label: "Less Then 60%", value: "5,300+" }
+    ],
     features: ["Real MNC Data", "S/4HANA Ready", "ERP Experts"],
     journey: [
       { 
@@ -950,7 +1300,63 @@ export const courses: Course[] = [
           { title: "Asset Retirement", description: "Manage asset scrapping, sales with revenue, and internal asset transfers." }
         ]
       }
+    ],
+    projects: [
+      { title: "Real-World Case Study 1", description: "Apply your skills to solve an industry-standard problem using modern frameworks." },
+      { title: "Portfolio Capstone Project", description: "Build a complete, end-to-end project to showcase your expertise to potential employers." },
+      { title: "Live API Integration", description: "Connect with external data sources and APIs to build dynamic, real-time applications." },
+      { title: "Performance Optimization", description: "Audit and optimize your application for speed, security, and scalability." }
+    ],
+    whatsIncluded: [
+      {
+        feature: "Free Aptitude and Technical Skills Training",
+        details: [
+          "Learn basic maths and logical thinking to solve problems easily",
+          "Understand simple coding and technical concepts step by step",
+          "Get ready for exams and interviews with regular practice"
+        ]
+      },
+      {
+        feature: "Hands-On Projects",
+        details: [
+          "Work on real-time projects to apply what you learn",
+          "Build mini apps and tools daily to enhance your coding skills"
+        ]
+      },
+      {
+        feature: "AI Powered Self Interview Practice Portal",
+        details: [
+          "Practice interview questions with instant AI feedback",
+          "Improve your answers by speaking and reviewing them"
+        ]
+      }
+    ],
+    targetAudience: [
+      "IT Professionals",
+      "Non-IT Career Switchers",
+      "Fresh Graduates",
+      "Diploma Holders",
+      "Graduates with Less Than 60%"
+    ],
+    keySkills: [
+      {
+        skill: "Core Technical Mastery",
+        description: "Develop a strong foundation in the primary tools and languages of this domain."
+      },
+      {
+        skill: "Problem Solving",
+        description: "Learn to approach complex business problems with logical, structured solutions."
+      },
+      {
+        skill: "Project Architecture",
+        description: "Understand how to design and structure large-scale applications from scratch."
+      },
+      {
+        skill: "Industry Best Practices",
+        description: "Adopt coding standards, version control, and methodologies used by top tech companies."
+      }
     ]
+
   },
   {
     id: "8",
@@ -971,6 +1377,20 @@ export const courses: Course[] = [
     salaryRange: "4.5 LPA - 11 LPA",
     originalPrice: 45000,
     discountedPrice: 19999,
+    targetRole: "Software Engineer",
+    bullets: [
+      "Master the fundamental and advanced concepts with hands-on practice",
+      "Complete career assistance with placement opportunities from top companies",
+      "Work on real-time projects and case studies applying modern industry practices",
+      "Beginner-friendly sessions with personalized career mentorship",
+      "Earn an industry-recognized certification supporting placement and career growth"
+    ],
+    stats: [
+      { label: "Freshers To IT", value: "12,500+" },
+      { label: "NON-IT To IT", value: "6,200+" },
+      { label: "Career Gap", value: "8,100+" },
+      { label: "Less Then 60%", value: "5,300+" }
+    ],
     features: ["Supply Chain Focus", "MNC Case Studies", "Inventory Lab"],
     journey: [
       { 
@@ -1050,7 +1470,63 @@ export const courses: Course[] = [
           { title: "Integration Points", description: "Master the data handoffs between MM, Financial Accounting (FI), and Sales Distribution (SD)." }
         ]
       }
+    ],
+    projects: [
+      { title: "Real-World Case Study 1", description: "Apply your skills to solve an industry-standard problem using modern frameworks." },
+      { title: "Portfolio Capstone Project", description: "Build a complete, end-to-end project to showcase your expertise to potential employers." },
+      { title: "Live API Integration", description: "Connect with external data sources and APIs to build dynamic, real-time applications." },
+      { title: "Performance Optimization", description: "Audit and optimize your application for speed, security, and scalability." }
+    ],
+    whatsIncluded: [
+      {
+        feature: "Free Aptitude and Technical Skills Training",
+        details: [
+          "Learn basic maths and logical thinking to solve problems easily",
+          "Understand simple coding and technical concepts step by step",
+          "Get ready for exams and interviews with regular practice"
+        ]
+      },
+      {
+        feature: "Hands-On Projects",
+        details: [
+          "Work on real-time projects to apply what you learn",
+          "Build mini apps and tools daily to enhance your coding skills"
+        ]
+      },
+      {
+        feature: "AI Powered Self Interview Practice Portal",
+        details: [
+          "Practice interview questions with instant AI feedback",
+          "Improve your answers by speaking and reviewing them"
+        ]
+      }
+    ],
+    targetAudience: [
+      "IT Professionals",
+      "Non-IT Career Switchers",
+      "Fresh Graduates",
+      "Diploma Holders",
+      "Graduates with Less Than 60%"
+    ],
+    keySkills: [
+      {
+        skill: "Core Technical Mastery",
+        description: "Develop a strong foundation in the primary tools and languages of this domain."
+      },
+      {
+        skill: "Problem Solving",
+        description: "Learn to approach complex business problems with logical, structured solutions."
+      },
+      {
+        skill: "Project Architecture",
+        description: "Understand how to design and structure large-scale applications from scratch."
+      },
+      {
+        skill: "Industry Best Practices",
+        description: "Adopt coding standards, version control, and methodologies used by top tech companies."
+      }
     ]
+
   },
   {
     id: "9",
@@ -1071,6 +1547,20 @@ export const courses: Course[] = [
     salaryRange: "5 LPA - 20 LPA",
     originalPrice: 45000,
     discountedPrice: 19999,
+    targetRole: "Software Engineer",
+    bullets: [
+      "Master the fundamental and advanced concepts with hands-on practice",
+      "Complete career assistance with placement opportunities from top companies",
+      "Work on real-time projects and case studies applying modern industry practices",
+      "Beginner-friendly sessions with personalized career mentorship",
+      "Earn an industry-recognized certification supporting placement and career growth"
+    ],
+    stats: [
+      { label: "Freshers To IT", value: "12,500+" },
+      { label: "NON-IT To IT", value: "6,200+" },
+      { label: "Career Gap", value: "8,100+" },
+      { label: "Less Then 60%", value: "5,300+" }
+    ],
     features: ["Certification Vouchers", "AppExchange Lab", "Trailhead Focus"],
     journey: [
       { 
@@ -1150,7 +1640,63 @@ export const courses: Course[] = [
           { title: "Salesforce DX", description: "Adopt modern source-driven development using SFDX CLI, scratch orgs, and unlocked packages." }
         ]
       }
+    ],
+    projects: [
+      { title: "Real-World Case Study 1", description: "Apply your skills to solve an industry-standard problem using modern frameworks." },
+      { title: "Portfolio Capstone Project", description: "Build a complete, end-to-end project to showcase your expertise to potential employers." },
+      { title: "Live API Integration", description: "Connect with external data sources and APIs to build dynamic, real-time applications." },
+      { title: "Performance Optimization", description: "Audit and optimize your application for speed, security, and scalability." }
+    ],
+    whatsIncluded: [
+      {
+        feature: "Free Aptitude and Technical Skills Training",
+        details: [
+          "Learn basic maths and logical thinking to solve problems easily",
+          "Understand simple coding and technical concepts step by step",
+          "Get ready for exams and interviews with regular practice"
+        ]
+      },
+      {
+        feature: "Hands-On Projects",
+        details: [
+          "Work on real-time projects to apply what you learn",
+          "Build mini apps and tools daily to enhance your coding skills"
+        ]
+      },
+      {
+        feature: "AI Powered Self Interview Practice Portal",
+        details: [
+          "Practice interview questions with instant AI feedback",
+          "Improve your answers by speaking and reviewing them"
+        ]
+      }
+    ],
+    targetAudience: [
+      "IT Professionals",
+      "Non-IT Career Switchers",
+      "Fresh Graduates",
+      "Diploma Holders",
+      "Graduates with Less Than 60%"
+    ],
+    keySkills: [
+      {
+        skill: "Core Technical Mastery",
+        description: "Develop a strong foundation in the primary tools and languages of this domain."
+      },
+      {
+        skill: "Problem Solving",
+        description: "Learn to approach complex business problems with logical, structured solutions."
+      },
+      {
+        skill: "Project Architecture",
+        description: "Understand how to design and structure large-scale applications from scratch."
+      },
+      {
+        skill: "Industry Best Practices",
+        description: "Adopt coding standards, version control, and methodologies used by top tech companies."
+      }
     ]
+
   },
   {
     id: "10",
@@ -1171,6 +1717,20 @@ export const courses: Course[] = [
     salaryRange: "5 LPA - 15 LPA",
     originalPrice: 45000,
     discountedPrice: 19999,
+    targetRole: "Software Engineer",
+    bullets: [
+      "Master the fundamental and advanced concepts with hands-on practice",
+      "Complete career assistance with placement opportunities from top companies",
+      "Work on real-time projects and case studies applying modern industry practices",
+      "Beginner-friendly sessions with personalized career mentorship",
+      "Earn an industry-recognized certification supporting placement and career growth"
+    ],
+    stats: [
+      { label: "Freshers To IT", value: "12,500+" },
+      { label: "NON-IT To IT", value: "6,200+" },
+      { label: "Career Gap", value: "8,100+" },
+      { label: "Less Then 60%", value: "5,300+" }
+    ],
     features: ["CSA Prep", "Scripting Lab", "Workflow Design"],
     journey: [
       { 
